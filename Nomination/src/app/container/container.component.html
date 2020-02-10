@@ -1,5 +1,5 @@
 <div class="main-container">
-    
+
   <div style="text-align: center;">
       Experience a new world of interation
        <h3>FORM OF NOMINATION</h3>
@@ -8,26 +8,24 @@
   <hr>
   (Name of Fund)
  </div>
-
+ 
   <form method="POST" action="" class="form-container">
     <label for="name">First Name</label>
-    <input type="text" [(ngModel)]="empName"  #name="ngModel" placeholder="Enter Name" name="name" required>
+    <input type="text" [(ngModel)]="nominations[0].name"  #name="ngModel" placeholder="Enter Name" name="name" required>
     <div class="error-msg" *ngIf="name.touched && !name.valid">*Field is Required</div>
 
     <label for="fname">FATHER'S/HUSBAND'S NAME(IN BLOCK LETTERS)</label>
-    <input type="text" [(ngModel)]="fName"  #fname="ngModel" placeholder="FATHER'S/HUSBAND'S NAME)" name="fname" required>
+    <input type="text" [(ngModel)]="nominations[0].father_name"  #fname="ngModel" placeholder="FATHER'S/HUSBAND'S NAME)" name="fname" required>
     <div class="error-msg" *ngIf="fname.touched && !fname.valid">*Field is Required</div>
       
     <label for="gender">Gender</label>
-    <select name="gender" id="gender" [(ngModel)]="genderUser"  #gender="ngModel" required>
-      <option value="male">Male</option>
-      <option value="female">Female</option>
-      <option value="others">Others</option>
-    </select>
-    <div class="error-msg" *ngIf="gender.touched && !gender.valid">*Field is Required</div>
-
+    <input type="text" [(ngModel)]="nominations[0].gender"  #fname="ngModel" placeholder="GENDER" name="gender" required>
+    <!---<div class="error-msg" *ngIf="gender.touched && !gender.valid">*Field is Required</div>
+    -->
+    
+    
     <label for="emp_id">Employee No.</label>
-    <input type="text" [(ngModel)]="empNo"  #emp_id="ngModel" placeholder="Enter Employee No." name="emp_id" required>
+    <input type="text" [(ngModel)]="nominations[0].emp_no"  #emp_id="ngModel" placeholder="Enter Employee No." name="emp_id" required>
     <div class="error-msg" *ngIf="emp_id.touched && !emp_id.valid">*Field is Required</div>
 
     <label for="religion">Religion</label>

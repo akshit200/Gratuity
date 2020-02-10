@@ -7,7 +7,7 @@
 <input type="text"[(ngModel)]="firstname" ngModel #firstName="ngModel"(change)="log(firstname)"placeholder="Enter First Name"name="firstname"required>
 <div class="alert alert-danger *ngIf="firstName.touched && !firstName.valid>Required</div>
 <label for="lastname">Last Name</label>
-<input type="text"placeholder="Enter First Name name="lastname>
+<input type="text"placeholder="Enter Last Name" name=lastname>
 <label for="dob">Date of Birth</label>
 <input type="date"name="dob"required>
 <label for="gender">Gender</label>
