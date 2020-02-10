@@ -1,0 +1,83 @@
+.container
+{
+margin-top: 90px;
+margin-left:  auto;
+margin-right: auto;
+width: 90%;
+text-align: left;
+}
+h1{
+text-align: center;
+}
+ 
+.alert{
+display: block;
+width: 50%;
+margin-left: 300px;
+ 
+}
+ 
+form{
+margin:8pxauto;
+width: 100%;
+font-size: 13px;
+ 
+}
+.input{
+display: block;
+width: 80%;
+}
+label{
+margin-left: 300px;
+}
+label[for="gender"]{
+display: block;
+margin-left: 300px;
+ 
+}
+select{
+display: block;
+margin-left: 300px;
+width: 50%;
+padding:1.5rem;
+border-color: black;
+}
+ 
+input{
+outline-color:white;
+margin-left: 300px;
+ 
+margin-bottom: 1.5rem;
+outline-width: 0.2rem;
+font-variant: normal;
+font-weight: bolder;
+font-feature-settings: "vjmo";
+width:50%;
+padding: 1rem;
+border-style: solid;
+border-bottom-left-radius: 0rem;
+border-top-right-radius: 0rem;
+display: block;
+}
+input[type="text"]:focus{
+border-color: #54b948;
+}
+ 
+input[type="password"]:focus{
+border-color: #54b948;
+}
+ 
+input[type="number"]:focus{
+border-color: #54b948;
+}
+ 
+button{
+display: block;
+padding: 1rem6rem;
+margin:10pxauto;
+}
+button:hover{
+color: #54b948;
+box-shadow: #54b948;
+border-color: #54b948;
+}
