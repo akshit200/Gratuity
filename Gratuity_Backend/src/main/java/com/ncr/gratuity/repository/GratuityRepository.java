@@ -21,7 +21,7 @@ public class GratuityRepository {
 	public Iterable<GratuityList> getData()
 	{
 		HibernateQuerries hibernateQuerries=new HibernateQuerries(em);
-		return hibernateQuerries.getData(2L);
+		return hibernateQuerries.getData();
 	}
 	/*
 	public Iterable<ToDoList> getData() {

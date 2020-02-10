@@ -17,11 +17,11 @@ public class HibernateQuerries
 		super();
 		this.em = em;
 	}
-	public Iterable<GratuityList> getData(long id)
+	public Iterable<GratuityList> getData()
 	{
 		//List result=em.createNativeQuery("Select * from List"); 
-		List result=em.createQuery("from ToDoList where ID=:xyz").setParameter("xyz",id).getResultList(); 
-		List result2=em.createNativeQuery("select * from  List ").getResultList();	
-		return result2;
+		List result=em.createQuery("from GratuityList").getResultList(); 
+		//List result2=em.createNativeQuery("select * from  List ").getResultList();	
+		return result;
 	}
 }

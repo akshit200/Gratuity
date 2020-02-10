@@ -21,7 +21,7 @@ public class GratuityList {
     
     //private Long ID;
     @Column(name= "EmployeeNumber")
-    private long emp_no;
+    private String emp_no;
     
     
     public String getName() {
@@ -48,11 +48,11 @@ public class GratuityList {
 		this.gender = gender;
 	}
 
-	public long getEmp_no() {
+	public String getEmp_no() {
 		return emp_no;
 	}
 
-	public void setEmp_no(long emp_no) {
+	public void setEmp_no(String emp_no) {
 		this.emp_no = emp_no;
 	}
 
