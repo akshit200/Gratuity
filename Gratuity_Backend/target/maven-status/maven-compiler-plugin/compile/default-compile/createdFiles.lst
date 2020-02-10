@@ -1,0 +1,7 @@
+com\ncr\todo\exception\ErrorDetails.class
+com\ncr\todo\SpringBootConsoleApplication.class
+HQL\HibernateQuerries.class
+com\ncr\todo\configuration\SwaggerConfig.class
+com\ncr\todo\exception\UserNotFoundException.class
+com\ncr\todo\Helper\CommonUtils.class
+com\ncr\todo\exception\CustomizedResponseEntityExceptionHandler.class

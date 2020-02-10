@@ -1,0 +1,28 @@
+diff a/src/main/resources/application.properties b/src/main/resources/application.properties	(rejected hunks)
+@@ -42,16 +42,23 @@
+  ## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+  
+  
+ -#spring.datasource.url = jdbc:mysql://skillsetrepo.c7fcjdjlobub.ap-south-1.rds.amazonaws.com:1532/skill_hub?useSSL=false
+ -#spring.datasource.username = skillsetrepo
+ -#spring.datasource.password = skillsetrepo
+ -
+ +spring.datasource.url = jdbc:mysql://skillsetrepo.c7fcjdjlobub.ap-south-1.rds.amazonaws.com:1532/skill_hub?useSSL=false
+ +spring.datasource.username = skillsetrepo
+ +spring.datasource.password = skillsetrepo
+  
+++<<<<<<< Updated upstream
+ +#
+- #spring.datasource.url = jdbc:mysql://localhost:3306/skill_hub?useSSL=false
+- #spring.datasource.username = root
+- #spring.datasource.password = Amar@1969
++ spring.datasource.url = jdbc:mysql://localhost:3306/skill_hub?useSSL=false
++ spring.datasource.username = root
+ -spring.datasource.password = sarthak14
+++spring.datasource.password = Amar@1969
+++=======
+++
+++##spring.datasource.url = jdbc:mysql://localhost:3306/skill_hub?useSSL=false
+++##spring.datasource.username = root
+++##spring.datasource.password = sarthak14
+++>>>>>>> Stashed changes

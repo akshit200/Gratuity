@@ -1,0 +1,10 @@
+C:\Projects\ToDo\src\main\java\com\ncr\todo\configuration\SwaggerConfig.java
+C:\Projects\ToDo\src\main\java\com\ncr\todo\exception\UserNotFoundException.java
+C:\Projects\ToDo\src\main\java\HQL\HibernateQuerries.java
+C:\Projects\ToDo\src\main\java\com\ncr\todo\UserEntityManagerCommandLineRunner.java
+C:\Projects\ToDo\src\main\java\com\ncr\todo\exception\CustomizedResponseEntityExceptionHandler.java
+C:\Projects\ToDo\src\main\java\com\ncr\todo\exception\ErrorDetails.java
+C:\Projects\ToDo\src\main\java\com\ncr\todo\Helper\CommonUtils.java
+C:\Projects\ToDo\src\main\java\com\ncr\todo\UserRepositoryCommandLineRunner.java
+C:\Projects\ToDo\src\main\java\com\ncr\todo\configuration\HibernateConfiguration.java
+C:\Projects\ToDo\src\main\java\com\ncr\todo\SpringBootConsoleApplication.java
