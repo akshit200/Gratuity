@@ -23,5 +23,27 @@ public class HibernateQuerries
 		List result=em.createQuery("from GratuityList").getResultList();
 		//List result2=em.createNativeQuery("select * from  List ").getResultList();	
 		return result;
+	}/*
+	public void setData(String paddress,String religion)
+	{
+		//List result=em.createNativeQuery("Select * from List"); 
+		List result=em.createNativeQuery("insert into gratuity_fields(paddress,religion) values('Delhi','Indian');").getResultList();
+		//List result2=em.createNativeQuery("select * from  List ").getResultList();	
+	}*/
+	
+	public void updateData(String paddress,String religion, long id)
+	{
+		//religion="Hindu";
+		//List result=em.createNativeQuery("Select * from List"); 
+		
+		
+		
+		Query query=em.createNativeQuery("update GratuityFields set paddress = :city,Religion=:rel WHERE ID=:xyz ");
+		query.setParameter("city",paddress);
+		query.setParameter("rel",religion);
+		query.setParameter("xyz",id);
+	
+		query.executeUpdate();
 	}
+	
 }

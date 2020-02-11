@@ -15,6 +15,14 @@ public class GratuityService {
 	public Iterable<GratuityList> getData() {
 		
 		return gratuityRepository.getData();
+	}/*
+	public GratuityList getDataById(long id)
+	{
+		return gratuityRepository.findById(id);
+	}*/
+	public void updateData(String padress,String religion,Long id)
+	{
+		gratuityRepository.updateData(padress,religion,id);
 	}
 	public void delete(long id)
 	{

@@ -12,6 +12,5 @@ private gratuityUrl: string;
   constructor(private http:HttpClient) {
     this.gratuityUrl = 'http://localhost:8080/users';
    }
-   public get(Gratyuity: )
-
+ 
 }

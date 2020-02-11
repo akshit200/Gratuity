@@ -11,23 +11,22 @@
  
   <form method="POST" action="" class="form-container">
     <label for="name">First Name</label>
-    <input type="text" [(ngModel)]="nominations[0].name"  #name="ngModel" placeholder="Enter Name" name="name" required>
-    <div class="error-msg" *ngIf="name.touched && !name.valid">*Field is Required</div>
+    <input type="text" [value]="nominations[1].name" name="name" required>
 
     <label for="fname">FATHER'S/HUSBAND'S NAME(IN BLOCK LETTERS)</label>
-    <input type="text" [(ngModel)]="nominations[0].father_name"  #fname="ngModel" placeholder="FATHER'S/HUSBAND'S NAME)" name="fname" required>
-    <div class="error-msg" *ngIf="fname.touched && !fname.valid">*Field is Required</div>
+    <input type="text"  name="fname" [value]="nominations[1].father_name" required>
       
     <label for="gender">Gender</label>
-    <input type="text" [(ngModel)]="nominations[0].gender"  #fname="ngModel" placeholder="GENDER" name="gender" required>
+    <input type="text" [value]="nominations[0].gender" name="gender" required>
     <!---<div class="error-msg" *ngIf="gender.touched && !gender.valid">*Field is Required</div>
     -->
     
     
     <label for="emp_id">Employee No.</label>
-    <input type="text" [(ngModel)]="nominations[0].emp_no"  #emp_id="ngModel" placeholder="Enter Employee No." name="emp_id" required>
+    <input type="text" [value]="nominations[0].emp_no"  name="emp_id" required>
+    <!---
     <div class="error-msg" *ngIf="emp_id.touched && !emp_id.valid">*Field is Required</div>
-
+    -->
     <label for="religion">Religion</label>
     <input type="text" [(ngModel)]="nominations[2].religion"  #religion="ngModel" placeholder="Enter Religion" name="religion" required>
     <div class="error-msg" *ngIf="religion.touched && !religion.valid">*Field is Required</div>
@@ -43,9 +42,10 @@
     <div class="error-msg" *ngIf="mar_status.touched && !mar_status.valid">*Field is Required</div>
 
     <label for="dob">Date of Birth</label>
-    <input type="date" name="dob" [(ngModel)]="nominations[2].dOB"  #dob="ngModel" required>
+    <input type="date" name="dob" [value]="nominations[2].dOB"  #dob="ngModel" required>
+    <!--
     <div class="error-msg" *ngIf="dob.touched && !dob.valid">*Field is Required</div>
-
+    -->
       
     <label for="address">Permanent Address</label>
     <input type="text" [(ngModel)]="empAddress"  #address="ngModel" placeholder="Enter Address" name="address" required>
