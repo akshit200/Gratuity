@@ -38,7 +38,97 @@ public class GratuityList {
     @Column(name= "ehusband")
     private String ehusband;
     
-    public String getReligion() {
+    @Column(name= "n_name")
+    private String n_name;
+    
+    @Column(name= "n_address")
+    private String n_address;
+    
+    @Column(name= "n_relation")
+    private String n_realtion;
+    
+    @Column(name= "n_dob")
+    private String n_dob;
+    
+    @Column(name= "n_amount")
+    private String n_amount;
+   
+    @Column(name= "w1_sig")
+    private String w1_sig;
+    
+    @Column(name= "w2_sig")
+    private String w2_sig;
+    
+    @Column(name= "emp_sig")
+    private String emp_sig;
+    
+  
+    
+    public String getW1_sig() {
+		return w1_sig;
+	}
+
+	public void setW1_sig(String w1_sig) {
+		this.w1_sig = w1_sig;
+	}
+
+	public String getW2_sig() {
+		return w2_sig;
+	}
+
+	public void setW2_sig(String w2_sig) {
+		this.w2_sig = w2_sig;
+	}
+
+	public String getEmp_sig() {
+		return emp_sig;
+	}
+
+	public void setEmp_sig(String emp_sig) {
+		this.emp_sig = emp_sig;
+	}
+
+	public String getN_name() {
+		return n_name;
+	}
+
+	public void setN_name(String n_name) {
+		this.n_name = n_name;
+	}
+
+	public String getN_address() {
+		return n_address;
+	}
+
+	public void setN_address(String n_address) {
+		this.n_address = n_address;
+	}
+
+	public String getN_realtion() {
+		return n_realtion;
+	}
+
+	public void setN_realtion(String n_realtion) {
+		this.n_realtion = n_realtion;
+	}
+
+	public String getN_age() {
+		return n_dob;
+	}
+
+	public void setN_age(String n_dob) {
+		this.n_dob = n_dob;
+	}
+
+	public String getN_amount() {
+		return n_amount;
+	}
+
+	public void setN_amount(String n_amount) {
+		this.n_amount = n_amount;
+	}
+
+	public String getReligion() {
 		return religion;
 	}
 
