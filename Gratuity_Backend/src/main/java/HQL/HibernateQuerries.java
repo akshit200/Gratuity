@@ -20,7 +20,7 @@ public class HibernateQuerries
 	public Iterable<GratuityList> getData()
 	{
 		//List result=em.createNativeQuery("Select * from List"); 
-		List result=em.createQuery("from GratuityList").getResultList(); 
+		List result=em.createQuery("from GratuityList").getResultList();
 		//List result2=em.createNativeQuery("select * from  List ").getResultList();	
 		return result;
 	}

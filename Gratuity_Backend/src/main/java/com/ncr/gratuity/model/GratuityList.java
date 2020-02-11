@@ -23,8 +23,62 @@ public class GratuityList {
     @Column(name= "EmployeeNumber")
     private String emp_no;
     
+    @Column(name= "Religion")
+    private String religion;
     
-    public String getName() {
+    @Column(name= "marital_status")
+    private String marital_status;
+    
+    @Column(name= "DOB")
+    private String dob;
+    
+    @Column(name= "paddress")
+    private String paddress;
+    
+    @Column(name= "ehusband")
+    private String ehusband;
+    
+    public String getReligion() {
+		return religion;
+	}
+
+	public void setReligion(String religion) {
+		this.religion = religion;
+	}
+
+	public String getMarital_status() {
+		return marital_status;
+	}
+
+	public void setMarital_status(String marital_status) {
+		this.marital_status = marital_status;
+	}
+
+	public String getDob() {
+		return dob;
+	}
+
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+
+	public String getPaddress() {
+		return paddress;
+	}
+
+	public void setPaddress(String paddress) {
+		this.paddress = paddress;
+	}
+
+	public String getEhusband() {
+		return ehusband;
+	}
+
+	public void setEhusband(String ehusband) {
+		this.ehusband = ehusband;
+	}
+
+	public String getName() {
 		return name;
 	}
 

@@ -6,5 +6,10 @@ export class Nomination {
     father_name: string;
     gender: string;
     name: string;
+    dob:string;
+    ehusband:string;
+    marital_status:string;
+    paddress:string;
+    religion:string;
     
 }
