@@ -10,7 +10,6 @@ import { PfForm2Component } from './pf-form2/pf-form2.component';
 import { EpfFormComponent } from './epf-form/epf-form.component';
 import { EpsNominationComponent } from './eps-nomination/eps-nomination.component';
 import { FirstComponent } from './first/first.component';
-import { FormTabsComponent } from './form-tabs/form-tabs.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import { FormTabsComponent } from './form-tabs/form-tabs.component';
     PfForm2Component,
     EpfFormComponent,
     EpsNominationComponent,
-    FirstComponent,
-    FormTabsComponent
+    FirstComponent
   ],
   imports: [
     BrowserModule,
