@@ -118,8 +118,8 @@
           Date of Birth is required
         </span>
 
-        <label for="Amount">Amount:</label>
-        <input type="text" name="Amount" id ="Amount" #Amount="ngModel" [(ngModel)]="containers[i].Amount" required>
+        <label for="Amount">Amount (%):</label>
+        <input type="number" name="Amount" id ="Amount" #Amount="ngModel" [(ngModel)]="containers[i].Amount" required>
         <span class="error" *ngIf="Amount.touched  && Amount.invalid">
           Amount is required
         </span>
@@ -158,8 +158,8 @@
 
     
     <!-- <input type="submit" value="Submit"> -->
-  <a style="margin-left:200px;" 
-  routerLink="/gratuity" type="submit" class="btn btn-success">Next</a>
+  <a style="margin-left:320px;" 
+  routerLink="/gratuity" type="submit" class="btn btn-success">Save and Preview</a>
 
   </form>
 </div>

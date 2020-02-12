@@ -5,7 +5,8 @@ import { ContainerComponent } from './container/container.component';
 
 const routes: Routes = [
   {path:"",component:ContainerComponent},
-  { path: 'gratuity', component : GratuityPdfComponent}
+  { path: 'gratuity', component : GratuityPdfComponent},
+  { path: 'container', component : ContainerComponent}
  ];
 
 @NgModule({
