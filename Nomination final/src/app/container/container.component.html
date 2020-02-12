@@ -95,36 +95,40 @@
  
 
         <label for="nominee_name">Nominee Name:</label>
-        <input type="text" name="nominee_name" id ="nominee_name" #nominee_name="ngModel" [(ngModel)]="containers[i].name" required>
-        <span class="error" *ngIf="nominee_name.touched  && nominee_name.invalid">
-          Nominee name is required
+        <input type="text" name="nominee_name" id ="nominee_name" #nominee_name="ngModel" [(ngModel)]="containers[i].name" placeholder = "Enter Nominee Name" required>
+        <span class="error-msg" *ngIf="nominee_name.touched  && nominee_name.invalid">
+          *Field is required
         </span>
+        <br>
 
         <label for="Address">Address:</label>
-        <input type="text" name="Address" id ="Address" #Address="ngModel" [(ngModel)]="containers[i].Address" required>
-        <span class="error" *ngIf="nominee_name.touched  && nominee_name.invalid">
-         Address is required
+        <input type="text" name="Address" id ="Address" #Address="ngModel" [(ngModel)]="containers[i].Address" placeholder = "Enter Address" required>
+        <span class="error-msg" *ngIf="nominee_name.touched  && nominee_name.invalid">
+          *Field is required
         </span>
 
+        <br>
         <label for="Relation">Relation:</label>
-        <input type="text" name="Relation" id ="Relation" #Relation="ngModel" [(ngModel)]="containers[i].Relation" required>
-        <span class="error" *ngIf="Relation.touched  && Relation.invalid">
-         Relation is required
+        <input type="text" name="Relation" id ="Relation" #Relation="ngModel" [(ngModel)]="containers[i].Relation" placeholder = "Enter Relation" required>
+        <span class="error-msg" *ngIf="Relation.touched  && Relation.invalid">
+          *Field is required
         </span>
+        <br>
 
         <label for="dob">Date of Birth:</label>
         <input type="date" name="dob" id ="dob" #dob="ngModel" [(ngModel)]="containers[i].dob" required>
-        <span class="error" *ngIf="dob.touched  && dob.invalid">
-          Date of Birth is required
+        <span class="error-msg" *ngIf="dob.touched  && dob.invalid">
+          *Field is required
         </span>
+
+        <span class="brmedium"></span>
 
         <label for="Amount">Amount (%):</label>
-        <input type="number" name="Amount" id ="Amount" #Amount="ngModel" [(ngModel)]="containers[i].Amount" required>
-        <span class="error" *ngIf="Amount.touched  && Amount.invalid">
-          Amount is required
+        <input type="number" name="Amount" id ="Amount" #Amount="ngModel" [(ngModel)]="containers[i].Amount" min="1" max="100" placeholder ="Enter Amount(1-100)" required>
+        <span class="error-msg" *ngIf="Amount.touched  && Amount.invalid">
+          *Field is required
         </span>
 
-       
 
   <!-- <div class="error" *ngIf="!newTask.taskName && taskFrom.submitted">Please enter a valid taskname.</div> -->
   </div>
@@ -133,13 +137,8 @@
   <button (click)="remove()">Remove</button>
 </div>
 
-
-
-
-​
-
-
-
+    <br>
+    
     <label for="wit_sign">First Witness Signature</label>
     <input type="file" [(ngModel)]="witSign"  #wit_sign="ngModel" name="wit_sign" required>
     <div class="error-msg" *ngIf="wit_sign.touched && !wit_sign.valid">*Field is Required</div>

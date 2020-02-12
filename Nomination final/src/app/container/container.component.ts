@@ -16,6 +16,7 @@ export class ContainerComponent  {
   dataarray=[];
   containers = [];
 
+    
   
   ngOnInit() {
     this.dataarray.push(this.Table);
