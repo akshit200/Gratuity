@@ -1,0 +1,63 @@
+div.a{
+    border-style: solid;
+    border-color: black;
+    box-sizing: border-box ;
+    word-wrap: normal;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.calign{
+    text-align: center;
+ 
+}
+.lalign{
+    text-align: left;
+}
+.ralign{
+    text-align: right;
+    margin-right: 80px;
+}
+div.pad{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 2px;
+}
+.brmedium { 
+    display: block; 
+    margin-bottom: 1em; 
+}
+    .pgraf{
+        margin-right: 80px;
+        text-align: justify;
+    }
+    .subpgraf{
+        margin-right: 65px;
+
+    }
+    .psection{
+        margin-left: 35px;
+        margin-right: 25px;
+    }
+    hr {
+        border: none;
+        height: 1px;
+        color: black; 
+        background-color: black;
+    }
+    .ulabel{
+        width: 350px;
+        display: inline-block;
+        margin-left: 50px;
+    }
+
+    input[type=file]{
+    margin-left: 560px;
+    }

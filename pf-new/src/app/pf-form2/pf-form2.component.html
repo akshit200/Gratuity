@@ -1,0 +1,176 @@
+<div  class="container">
+    
+  <h1 class="main-heading">Application For Employment</h1>
+<br>
+<br>
+<button routerLink="/pf-form1"  type="button" class="btn btn-secondary">Terms and Conditions</button>
+<button routerLink="/pf-form2" type="button" class="btn btn-secondary">DECLARATION FORM</button>
+<button routerLink="/epf-form" type="button" class="btn btn-secondary">PART - 5 (EPF)</button>
+<button routerLink="/eps-nomination"  type="button" class="btn btn-secondary">EPS NOMINATION FORM 2</button>
+<button routerLink="/first"  type="button" class="btn btn-secondary">Edit</button>
+</div>
+<div class="a">
+    <div class="pad">
+        <h3 class="calign">NCR CORPORATION INDIA PVT. LTD</h3>
+        <h4 class="ralign">Employee ID<input type="text" class="dotted" ng-required="expression"></h4>
+        <h5 class="calign">NOMINATION AND DECLARATION FORM <br>FOR UNEXEMPTED / EXEMPTED ESABLISHMENTS</h5>
+        <h5 class="calign">Declaration and Nomination form under the Employees' Provident Fund</h5>
+        <p class="psection">(Paragraph 33 and 61(1) of the Employee's Provident Fund Scheme, 1952 and Paragraph 13 of the Employees' Family Pension Scheme, 71) </p>
+        <span class="brmedium"></span>
+            <span class="brmedium"></span>
+            <!-- <h3 class="calign">REQUEST FORM</h3> -->
+            <span class="brmedium"></span>
+            <form>
+            <p> <label for="name">1. Name (in Block letters) :</label>
+                 <input type="text" class="dotted" name="emp_name" id="emp_name" ng-required="expression">  
+            </p>
+
+            <span class="brmedium"></span>
+
+            <p><label for="name">2. Father's/Husband's Name(In Block Letters) :</label>
+                <input type="text" class="dotted" name="father_name" id="father_name" ng-required="expression"> 
+            </p>
+
+            <span class="brmedium"></span>
+
+            <p> <label for="dbirth">3. Date of birth:</label>
+                <input type="date" class="dotted" name="Dob" id="Dob"  ng-required="expression">  
+            </p>
+
+            <span class="brmedium"></span>
+
+            <p> <label for="Employee Id">4.Employee Id:</label>
+                <input type="text" class="dotted" name="emp_id" id="emp_id" ng-required="expression">  
+            </p>
+
+            <span class="brmedium"></span>
+
+            <p> <label for="joindate">5. Date of Joining:</label>
+                <input type="date" class="dotted" name="joinig_date" id="joinig_date" ng-required="expression">  
+            </p>
+
+            <span class="brmedium"></span>
+
+            <p> <label for="Marital Status">6. Marital Status:</label>
+                <input type="radio" name="status" value="unmarried" checked> Unmarried
+                <input type="radio" name="status" value="married"> Married
+            </p>
+    
+            <p> <label for="p_address"> 7. Permanent Address :</label>
+            <input type="text" class="dotted" ng-required="expression" placeholder="Address">
+            </p> 
+            <span class="brmedium"></span>
+
+            <h3 class="calign">PART - A (EPF)</h3>
+            <p class="psection">I  hereby  nominate  the  person(s)  /  cancel  the  nomination  made  by  me  previously  and  nominate  the  person(s),  mentioned below to receive the amount standing to my credit in the Employee's Provident Fund in the event of my death:  </p>
+            <span class="brmedium"></span>
+      
+            <!-- <table>
+                <tr>
+                  <th>Name and Address of nominee or nominees</th>
+                  <th>Nominee's relationship with the employee</th> 
+                  <th>Age of Nominees</th>
+                  <th>Amount of Gratuity to be paid in each Nominee</th>
+                  <th></th>
+                </tr><tr>
+                    <td>Jill</td>
+                    <td>Smith</td>
+                    <td>50</td>
+                    <td>94</td>
+                  </tr>
+                  <tr>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                    <td>94</td>
+                  </tr>
+                  <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>80</td>
+                    <td>94</td>
+                  </tr>
+                  <tr>
+                      <td>John</td>
+                      <td>Doe</td>
+                      <td>80</td>
+                      <td>94</td>
+                    </tr>
+                </table>
+                <br> -->
+           
+                <table class="nominee_details">
+                  <tr>
+                    <th>Name of nominee or nominees</th>
+                    <th>Address of nominee or nominees</th>
+                    <th>Nominee's relationship with the employee</th> 
+                    <th>Date of birth & Age of nominee(s) </th>
+                    <th>Total amount of  share  of  accumulations in Provident Fund to be paid to each nominee </th>
+                    <th>If  the  nominee  is  a  minor,  name  and  address  of  the  guardian who may receive the amount during the minority of nominee</th>
+                  </tr><tr>
+                      <td>Jill</td>
+                      <td>Jill</td>
+                      <td>Smith</td>
+                      <td>50</td>
+                      <td>94</td>
+                      <td>95</td>
+                    </tr>
+                    <tr>
+                      <td>Eve</td>
+                      <td>Jill</td>
+                      <td>Jackson</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>95</td>
+                    </tr>
+                    <tr>
+                      <td>John</td>
+                      <td>Jill</td>
+                      <td>Doe</td>
+                      <td>80</td>
+                      <td>94</td>
+                      <td>95</td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>Jill</td>
+                        <td>Doe</td>
+                        <td>80</td>
+                        <td>94</td>
+                        <td>95</td>
+                      </tr>
+                  </table>
+                  <br>
+             
+                    
+                <span class="brmedium"></span>
+              <span class="brmedium"></span>
+      
+                <p class="psection">*  Certified that I have no family as defined in Section 2 (h) of the Payement of Gratuity Act, 1972 and should I acquire a family hereafter, the above nominations should be deemed as cancelled.<p>
+             
+                <span class="brmedium"></span>
+
+                <p class="psection">*Certified that my father / mother is /are dependant upon me.</p>
+             
+                <span class="brmedium"></span>
+
+                <p class="psection">*Strike out whichever is not applicable. </p>
+
+      
+                <span class="brmedium"></span>
+        
+                <div class="none">
+                <p class="ralign">Employee Signature:</p>
+                </div>    
+                <span class="brmedium"></span> 
+        
+                <div class="ralign">
+                <input type="file" accept="image/*" ng-required="expression">
+                </div>
+                <span class="brmedium"></span>
+                <br>
+                </form>
+            </div>
+            
+            </div>
+            

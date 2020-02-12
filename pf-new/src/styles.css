@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+.nominee_details{ 
+    border-collapse: collapse;
+    width: 90%; 
+    margin-left: 35px;
+    margin-right:auto;       
+ 
+}
+.nominee_details td, .nominee_details th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+ 
+.nominee_details tr:nth-child(even){background-color: white;}
+ 
+.nominee_details tr:hover {background-color: #ddd;}
+ 
+.nominee_details th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: white;
+    color:black;
+}
+button{
+    display: inline;
+    
+    margin: 0px;
+    width: 245px;
+    height: 40px;
+    
+  }
+  button:hover{
+    color: #54b948;
+    box-shadow: #54b948;
+    border-color: #54b948;
+  }
+  
+  
+  

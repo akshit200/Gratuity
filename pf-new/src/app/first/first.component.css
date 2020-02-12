@@ -1,0 +1,61 @@
+.main-container{
+    margin-top: 80px;
+    padding: 1rem;
+  }
+  
+  .main-heading{
+    text-align: center;
+  }
+  
+  
+  .form-container{
+    margin:1rem auto;
+    max-width: 500px;
+    width: 100%;
+    padding: 2rem;
+  }
+  
+  input{
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    margin:8px 0;
+    border: 1px solid #ccc;
+  }
+  
+  label{
+    color:rgba(0, 0, 0, 0.67);
+    font-weight: 600;
+  }
+  
+  select{
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    margin:8px 0;
+    border: 1px solid #ccc;
+  }
+  
+  input:focus,input:active,
+  select:focus,select:active{
+    outline-color: #4caf50;
+  }
+  
+  input[type="submit"]{
+    display: block;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin:2rem 0;
+    border: none;
+    cursor: pointer;
+    width:100%;
+  }
+  
+  
+  .error-msg{
+    font-size: 12.8px;
+    color: #db133a;
+     margin:10px 0px;
+   }
+  
