@@ -29,6 +29,7 @@ input[type=text] {
     border: none;
     border-bottom: 1px solid #000000;
     padding-bottom: 2px;
+    outline-color: #4caf50;
 }
 .brmedium { 
     display: block; 

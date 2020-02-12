@@ -24,11 +24,12 @@ div.pad{
     padding-right: 20px;
     padding-bottom: 10px;
 }
-input[type=text] {
+input[type=text],[type=date],[type=file],[type=radio] {
     background: transparent;
     border: none;
     border-bottom: 1px solid #000000;
     padding-bottom: 2px;
+    outline-color: #4caf50;
 }
 .brmedium { 
     display: block; 
@@ -60,4 +61,5 @@ input[type=text] {
 
     input[type=file]{
     margin-left: 590px;
+    outline-color: #4caf50;
     }
