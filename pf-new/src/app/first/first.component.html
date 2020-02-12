@@ -4,20 +4,20 @@
     </div>
     <form  class="form-container">
       <label for="name">Name</label>
-      <input type="text" [(ngModel)]="empName"  #name="ngModel" placeholder="Enter Name" name="name" required>
+      <input type="text" [(ngModel)]="nominations[0].name"  #name="ngModel" placeholder="Enter Name" name="name" required>
       <div class="error-msg" *ngIf="name.touched && !name.valid">*Field is Required</div>
   
       <label for="fname">Father's/Husband Name(In Block Letters)</label>
-      <input type="text" [(ngModel)]="fName"  #fname="ngModel" placeholder="Father's/Husband Name" name="fname" required>
+      <input type="text" [(ngModel)]="nominations[0].father_name"  #fname="ngModel" placeholder="Father's/Husband Name" name="fname" required>
       <div class="error-msg" *ngIf="fname.touched && !fname.valid">*Field is Required</div>
         
       
       <label for="dob">Date of Birth</label>
-      <input type="date" name="dob" [(ngModel)]="dOB"  #dob="ngModel" required>
+      <input type="text" name="dob" [(ngModel)]="nominations[0].dob"  #dob="ngModel" required>
       <div class="error-msg" *ngIf="dob.touched && !dob.valid">*Field is Required</div>
   
       <label for="emp_id">Employee ID</label>
-      <input type="text" [(ngModel)]="empId"  #emp_id="ngModel" placeholder="Enter Employee No." name="emp_id" required>
+      <input type="text" [(ngModel)]="nominations[0].emp_no"  #emp_id="ngModel" placeholder="Enter Employee No." name="emp_id" required>
       <div class="error-msg" *ngIf="emp_id.touched && !emp_id.valid">*Field is Required</div>
 
 
@@ -26,17 +26,18 @@
       <div class="error-msg" *ngIf="doj.touched && !doj.valid">*Field is Required</div>
   
       <label for="mar_status">Marital Status</label>
-      <select name="mar_status" id="mar_status" [(ngModel)]="marStatus"  #mar_status="ngModel" required>
+      <input  name="mar_status" [(ngModel)]="nominations[0].marital_status"  #mar_status="ngModel" required>
+      <!-- <select name="mar_status" id="mar_status" [(ngModel)]="nominations[0].marital_status"  #mar_status="ngModel" required>
         <option value="Unmarried">Unmarried</option>
         <option value="Married">Married</option>
         <option value="Widow">Widow</option>
         <option value="Widower">Widower</option>
-      </select>
+      </select> -->
       <div class="error-msg" *ngIf="mar_status.touched && !mar_status.valid">*Field is Required</div>
       
         
       <label for="address">Permanent Address</label>
-      <input type="text" [(ngModel)]="empAddress"  #address="ngModel" placeholder="Enter Address" name="address" required>
+      <input type="text" [(ngModel)]="nominations[0].paddress"  #address="ngModel" placeholder="Enter Address" name="address" required>
       <div class="error-msg" *ngIf="address.touched && !address.valid">*Field is Required</div>
       
 

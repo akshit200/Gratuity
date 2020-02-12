@@ -10,6 +10,7 @@ import { PfForm2Component } from './pf-form2/pf-form2.component';
 import { EpfFormComponent } from './epf-form/epf-form.component';
 import { EpsNominationComponent } from './eps-nomination/eps-nomination.component';
 import { FirstComponent } from './first/first.component';
+import{HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FirstComponent } from './first/first.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [],

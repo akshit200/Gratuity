@@ -12,7 +12,7 @@
 <div class="a">
     <div class="pad">
         <h3 class="calign">NCR CORPORATION INDIA PVT. LTD</h3>
-        <h4 class="ralign">Employee ID<input type="text" class="dotted" ng-required="expression"></h4>
+        <h4 class="ralign">Employee ID<input   [(ngModel)]="nominations[0].emp_no" #emp_id="ngModel" ng-required="expression"></h4>
         <h5 class="calign">NOMINATION AND DECLARATION FORM <br>FOR UNEXEMPTED / EXEMPTED ESABLISHMENTS</h5>
         <h5 class="calign">Declaration and Nomination form under the Employees' Provident Fund</h5>
         <p class="psection">(Paragraph 33 and 61(1) of the Employee's Provident Fund Scheme, 1952 and Paragraph 13 of the Employees' Family Pension Scheme, 71) </p>
@@ -22,42 +22,46 @@
             <span class="brmedium"></span>
             <form>
             <p> <label for="name">1. Name (in Block letters) :</label>
-                 <input type="text" class="dotted" name="emp_name" id="emp_name" ng-required="expression">  
-            </p>
+              <input type="text" [(ngModel)]="nominations[0].name"  #name="ngModel" placeholder="Enter Name" name="name" required>
+      
+             </p>
 
             <span class="brmedium"></span>
 
             <p><label for="name">2. Father's/Husband's Name(In Block Letters) :</label>
-                <input type="text" class="dotted" name="father_name" id="father_name" ng-required="expression"> 
-            </p>
+              <input type="text" [(ngModel)]="nominations[0].father_name"  #fname="ngModel" placeholder="Father's/Husband Name" name="fname" required>
+      
+               </p>
 
             <span class="brmedium"></span>
 
             <p> <label for="dbirth">3. Date of birth:</label>
-                <input type="date" class="dotted" name="Dob" id="Dob"  ng-required="expression">  
+              <input type="text" name="dob" [(ngModel)]="nominations[0].dob"  #dob="ngModel" required> 
             </p>
 
             <span class="brmedium"></span>
 
             <p> <label for="Employee Id">4.Employee Id:</label>
-                <input type="text" class="dotted" name="emp_id" id="emp_id" ng-required="expression">  
+              <input type="text" [(ngModel)]="nominations[0].emp_no"  #emp_id="ngModel" placeholder="Enter Employee No." name="emp_id" required>
+        
             </p>
 
             <span class="brmedium"></span>
 
             <p> <label for="joindate">5. Date of Joining:</label>
-                <input type="date" class="dotted" name="joinig_date" id="joinig_date" ng-required="expression">  
-            </p>
+              <input type="text" name="doj" [(ngModel)]="dOJ"  #doj="ngModel" required>
+                </p>
 
             <span class="brmedium"></span>
 
             <p> <label for="Marital Status">6. Marital Status:</label>
-                <input type="radio" name="status" value="unmarried" checked> Unmarried
-                <input type="radio" name="status" value="married"> Married
+              <input  name="mar_status" [(ngModel)]="nominations[0].marital_status"  #mar_status="ngModel" required>
+      
             </p>
     
             <p> <label for="p_address"> 7. Permanent Address :</label>
-            <input type="text" class="dotted" ng-required="expression" placeholder="Address">
+            <input type="text" [(ngModel)]="nominations[0].paddress"  #address="ngModel" placeholder="Enter Address" name="address" required>
+      
             </p> 
             <span class="brmedium"></span>
 
