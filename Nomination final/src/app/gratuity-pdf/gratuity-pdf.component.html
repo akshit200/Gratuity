@@ -7,7 +7,9 @@
       <!-- <h3 class="calign">REQUEST FORM</h3> -->
       <span class="brmedium"></span>
       <form>
-        <p> 1. Name :   <input type="text" class="dotted" ng-required="expression">  </p>
+        <p> 1. Name :   <input type="text" [(ngModel)]="nominations[6].name"  #name="ngModel" placeholder="Enter Name" name="name" required>
+    
+          <input type="text" class="dotted" ng-required="expression">  </p>
         <p>FATHER'S/HUSBAND'S NAME(IN BLOCK LETTERS) :  <input type="text" class="dotted" ng-required="expression">  </p>
         <span class="brmedium"></span>
         2. Sex : 

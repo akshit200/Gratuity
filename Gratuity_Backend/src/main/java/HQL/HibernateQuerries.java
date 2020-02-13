@@ -31,16 +31,19 @@ public class HibernateQuerries
 		//List result2=em.createNativeQuery("select * from  List ").getResultList();	
 	}*/
 	
-	public void updateData(String paddress,String religion, long id)
+	public void updateData(String n_name,String n_address,String n_dob,String n_relation,String n_amount, long id)
 	{
 		//religion="Hindu";
 		//List result=em.createNativeQuery("Select * from List"); 
 		
 		
 		
-		Query query=em.createNativeQuery("update GratuityFields set paddress = :city,Religion=:rel WHERE ID=:xyz ");
-		query.setParameter("city",paddress);
-		query.setParameter("rel",religion);
+		Query query=em.createNativeQuery("update GratuityFields set n_name = :city,n_address = :rel, n_dob = :dob, n_relation = :re , n_amount = :am WHERE ID=:xyz ");
+		query.setParameter("city",n_name);
+		query.setParameter("rel",n_address);
+		query.setParameter("dob",n_dob);
+		query.setParameter("re",n_relation);
+		query.setParameter("am",n_amount);
 		query.setParameter("xyz",id);
 	
 		query.executeUpdate();

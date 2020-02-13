@@ -45,7 +45,7 @@ public class GratuityList {
     private String n_address;
     
     @Column(name= "n_relation")
-    private String n_realtion;
+    private String n_relation;
     
     @Column(name= "n_dob")
     private String n_dob;
@@ -104,12 +104,12 @@ public class GratuityList {
 		this.n_address = n_address;
 	}
 
-	public String getN_realtion() {
-		return n_realtion;
+	public String getN_relation() {
+		return n_relation;
 	}
 
-	public void setN_realtion(String n_realtion) {
-		this.n_realtion = n_realtion;
+	public void setN_relation(String n_relation) {
+		this.n_relation = n_relation;
 	}
 
 	public String getN_age() {

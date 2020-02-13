@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NominationService} from "../nomination.service";
 import {Nomination} from "../nomination";
+
 @Component({
   selector: 'app-container',
   templateUrl: './container.component.html',

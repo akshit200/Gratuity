@@ -43,10 +43,18 @@ public class GratuityController {
         return emp.get();
 		
 	}*/
+	
 	@PutMapping(value="/api/updateData/{id}")
-	public void updateData(@RequestParam String paddress, @RequestParam String religion, @PathVariable Long id)
+	public void updateData(@RequestParam String n_name, @RequestParam String n_address,@RequestParam String n_dob,@RequestParam String n_relation,@RequestParam String n_amount, @PathVariable Long id)
 	{
-		gratuityService.updateData(paddress, religion, id);
+		
+		System.out.println("name"+n_name);
+		System.out.println("n_address"+n_address);
+		System.out.println("n_dob"+n_dob);
+		System.out.println("n_relation"+n_relation);
+		System.out.println("n_amount"+n_amount);
+		System.out.println("id"+id);
+		gratuityService.updateData(n_name, n_address,n_dob,n_relation,n_amount, id);
 		
 	    // Optional<GratuityList> emp =  gratuityService.getDatabyId(id);
 	}
@@ -79,4 +87,6 @@ public class GratuityController {
 //	public void deleteById(@PathVariable long id){
 //		 gratuityService.delete(id);	 
 //	}
+	
+	
 }

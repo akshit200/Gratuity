@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ContainerComponent } from './container/container.component';
 import {FormsModule} from '@angular/forms';
 import { GratuityPdfComponent } from './gratuity-pdf/gratuity-pdf.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { GratuityPdfComponent } from './gratuity-pdf/gratuity-pdf.component';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],

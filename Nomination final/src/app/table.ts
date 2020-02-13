@@ -1,8 +1,9 @@
+import { logging } from 'protractor';
 export class Table {
 
-    name:any;
-    address:any;
-    relation:any;
-    age:any;
-    amount:any;
+    n_name:any;
+    n_address:any;
+    n_relation:any;
+    n_dob:any;
+    n_amount:any;
 }

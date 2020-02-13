@@ -6,6 +6,8 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import com.ncr.gratuity.model.GratuityList;
 import HQL.HibernateQuerries;
 
@@ -25,15 +27,16 @@ public class GratuityRepository {
 		HibernateQuerries hibernateQuerries=new HibernateQuerries(em);
 		return hibernateQuerries.getData();
 	}
-	public void updateData(String paddress,String religion,Long id)
+	public void updateData(String n_name,String n_address,String n_dob,String n_relation,String n_amount,Long id)
 	{
 		
 
 		GratuityList g=new GratuityList();
 		Optional<GratuityList> g1=gratuityCrudRepository.findById(id);
-		g.setPaddress(paddress);
-		g.setReligion(religion);
-		
+		g.setN_name(n_name);
+		g.setN_address(n_address);
+		System.out.println("rohit testing"+n_amount);
+		g.setN_amount(n_amount);
 		g.setEhusband(g1.get().getEhusband());
 		g.setFather_name(g1.get().getFather_name());
 		g.setEmp_no(g1.get().getEmp_no());
@@ -42,9 +45,6 @@ public class GratuityRepository {
 		g.setName(g1.get().getName());
 		g.setID(id);
 		gratuityCrudRepository.save(g);
-//		HibernateQuerries hibernateQuerries=new HibernateQuerries(em);
-//		hibernateQuerries.updateData(paddress, religion,id);
-//		
 	}
 	
 	/*
