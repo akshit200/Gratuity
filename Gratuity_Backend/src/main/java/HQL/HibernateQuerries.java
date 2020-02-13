@@ -41,6 +41,7 @@ public class HibernateQuerries
 		Query query=em.createNativeQuery("update GratuityFields set n_name = :city,n_address = :rel, n_dob = :dob, n_relation = :re , n_amount = :am WHERE ID=:xyz ");
 		query.setParameter("city",n_name);
 		query.setParameter("rel",n_address);
+//		query.setParameter("eps",eps_no);
 		query.setParameter("dob",n_dob);
 		query.setParameter("re",n_relation);
 		query.setParameter("am",n_amount);

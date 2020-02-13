@@ -37,6 +37,8 @@ public class GratuityRepository {
 		g.setN_address(n_address);
 		System.out.println("rohit testing"+n_amount);
 		g.setN_amount(n_amount);
+//		g.setEps_no(eps_no);
+		
 		g.setEhusband(g1.get().getEhusband());
 		g.setFather_name(g1.get().getFather_name());
 		g.setEmp_no(g1.get().getEmp_no());

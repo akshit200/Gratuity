@@ -14,15 +14,15 @@
   <form  class="form-container"  > 
 
     <label for="name">First Name</label>
-    <input type="text" [(ngModel)]="nominations[0].name"  #name="ngModel" placeholder="Enter Name" name="name" required>
+    <input type="text" disabled [(ngModel)]="nominations[1].name"  #name="ngModel" placeholder="Enter Name" name="name" required>
     <div class="error-msg" *ngIf="name.touched && !name.valid">*Field is Required</div>
 
     <label for="fname">Father's/Husband's Name (In Block Letters)</label>
-    <input type="text" [(ngModel)]="nominations[0].father_name"  #fname="ngModel" placeholder="Father's/Husband's Name" name="fname" required>
+    <input type="text" disabled [(ngModel)]="nominations[1].father_name"  #fname="ngModel" placeholder="Father's/Husband's Name" name="fname" required>
     <div class="error-msg" *ngIf="fname.touched && !fname.valid">*Field is Required-</div>
       
     <label for="gender">Gender</label>
-    <input type="text" [(ngModel)]="nominations[0].gender"  #gender="ngModel" placeholder="gender" name="gender" required>
+    <input type="text" disabled [(ngModel)]="nominations[1].gender"  #gender="ngModel" placeholder="gender" name="gender" required>
     <!-- <select name="gender" id="gender" [(ngModel)]="genderUser"  #gender="ngModel" required>
       <option value="male">Male</option>
       <option value="female">Female</option>
@@ -31,15 +31,15 @@
     <div class="error-msg" *ngIf="gender.touched && !gender.valid">*Field is Required</div>
 
     <label for="emp_id">Employee No.</label>
-    <input type="text" [(ngModel)]="nominations[0].emp_no"  #emp_id="ngModel" placeholder="Enter Employee No." name="emp_id" required>
+    <input type="text" disabled [(ngModel)]="nominations[1].emp_no"  #emp_id="ngModel" placeholder="Enter Employee No." name="emp_id" required>
     <div class="error-msg" *ngIf="emp_id.touched && !emp_id.valid">*Field is Required</div>
 
     <label for="religion">Religion</label>
-    <input type="text" [(ngModel)]="nominations[0].religion"  #religion="ngModel" placeholder="Enter Religion" name="religion" required>
+    <input type="text" disabled [(ngModel)]="nominations[1].religion"  #religion="ngModel" placeholder="Enter Religion" name="religion" required>
     <div class="error-msg" *ngIf="religion.touched && !religion.valid">*Field is Required</div>
 
     <label for="mar_status">Marital Status</label>
-    <input type="text" [(ngModel)]="nominations[0].marital_status"  #mar_status="ngModel" placeholder="mar_status" name="mar_status" required>
+    <input type="text" disabled [(ngModel)]="nominations[1].marital_status"  #mar_status="ngModel" placeholder="mar_status" name="mar_status" required>
     
     <!-- <select name="mar_status" id="mar_status" [(ngModel)]="marStatus"  #mar_status="ngModel" required>
       <option value="Unmarried">Unmarried</option>
@@ -50,12 +50,12 @@
     <div class="error-msg" *ngIf="mar_status.touched && !mar_status.valid">*Field is Required</div>
 
     <label for="dob">Date of Birth</label>
-    <input type="text" name="dob" [(ngModel)]="nominations[0].dob"  #dob="ngModel" required>
+    <input type="text" disabled name="dob" [(ngModel)]="nominations[1].dob"  #dob="ngModel" required>
     <div class="error-msg" *ngIf="dob.touched && !dob.valid">*Field is Required</div>
 
       
     <label for="address">Permanent Address</label>
-    <input type="text" [(ngModel)]="nominations[0].paddress"  #address="ngModel" placeholder="Enter Address" name="address" required>
+    <input type="text" disabled [(ngModel)]="nominations[1].paddress"  #address="ngModel" placeholder="Enter Address" name="address" required>
     <div class="error-msg" *ngIf="address.touched && !address.valid">*Field is Required</div>
 
     <label for="date_ex">Date of exclusion of my husband from my family</label>
@@ -161,9 +161,10 @@
 
     
     <!-- <input type="submit" value="Submit"> -->
-  <a style="margin-left:200px;" 
+  <a style="margin-left:200px;"
   routerLink="/gratuity" type="submit" class="btn btn-success">Next</a>
-  <button (click)="addTask(n_name, n_address, n_relation, n_dob, n_amount)">Submit</button>
+
+  <button (click)="addTask(n_name, n_address, n_relation, n_dob, n_amount) " >Submit</button>
 
   </form>
 </div>

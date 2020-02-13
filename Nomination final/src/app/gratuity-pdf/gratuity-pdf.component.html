@@ -7,35 +7,42 @@
       <!-- <h3 class="calign">REQUEST FORM</h3> -->
       <span class="brmedium"></span>
       <form>
-        <p> 1. Name :   <input type="text" [(ngModel)]="nominations[6].name"  #name="ngModel" placeholder="Enter Name" name="name" required>
+        <p> 1. Name :   <input type="text" [(ngModel)]="nominations[1].name"  #name="ngModel" placeholder="Enter Name" name="name" required>
     
           <input type="text" class="dotted" ng-required="expression">  </p>
-        <p>FATHER'S/HUSBAND'S NAME(IN BLOCK LETTERS) :  <input type="text" class="dotted" ng-required="expression">  </p>
+        <p>FATHER'S/HUSBAND'S NAME(IN BLOCK LETTERS) : <input type="text" [(ngModel)]="nominations[1].father_name"  #fname="ngModel" placeholder="Father's/Husband Name" name="fname" required>
+        </p>
         <span class="brmedium"></span>
-        2. Sex : 
-            <input type="radio" name="gender" value="male" checked> Male
+        2. Sex : <input type="text" value="Male">
+            <!-- <input type="radio" name="gender" value="male" checked> Male
             <input type="radio" name="gender" value="female"> Female
-            <input type="radio" name="gender" value="other"> Other
+            <input type="radio" name="gender" value="other"> Other -->
              <!-- <input type="text" ng-required="expression"> -->
         <span class="brmedium"></span>
 
-        3. Emp. No <input type="text" ng-required="expression">
+        3. Emp. No <input type="text" [(ngModel)]="nominations[1].emp_no"  #emp_id="ngModel" placeholder="Enter Employee No." name="emp_id" required>
+        
           <span class="brmedium"></span>
 
-        4. Religion <input type="text" ng-required="expression"> 
+        4. Religion  <input type="text" [(ngModel)]="nominations[1].religion"  #religion="ngModel" placeholder="Enter Employee No." name="religion" required>
+        
         <span class="brmedium"></span>
 
-        5. Marital Status <input type="radio" name="status" value="unmarried" checked> Unmarried
+        5. Marital Status  <input type="text"  name="mar_status" [(ngModel)]="nominations[1].marital_status"  #mar_status="ngModel" required>
+      
+        <!-- <input type="radio" name="status" value="unmarried" checked> Unmarried
         <input type="radio" name="status" value="married"> Married
-        <input type="radio" name="status" value="widow"> Widow or Widower
+        <input type="radio" name="status" value="widow"> Widow or Widower -->
         <span class="brmedium"></span>
 
         6. Date of birth :
-        <input type="date" ng-required="expression">
+        <input type="text" name="dob" [(ngModel)]="nominations[1].dob"  #dob="ngModel" required> 
+            
         <span class="brmedium"></span>
 
         7. Permanent Address :
-        <input type="text" class="dotted" ng-required="expression" placeholder="Address"> 
+        <input type="text" [(ngModel)]="nominations[1].paddress"  #address="ngModel" placeholder="Enter Address" name="address" required>
+      
         <span class="brmedium"></span>
         I hereby nominate the person(s): cancel the nomination made by me previously and nominate the person(s) mentioned below
         to receive the Amount of Gratuity in the event of my death before that amount becomes payable, or having become payable,
@@ -45,35 +52,27 @@
   
         <table>
             <tr>
-              <th>Name and Address of nominee or nominees (1)</th>
+              <th>Name of nominee or nominees (1)</th>
+              <th>Address of nominee or nominees</th>
               <th>Nominee's relationship with the employee (2)</th> 
               <th>Age of Nominees (3)</th>
               <th>Amount of Gratuity to be paid in each Nominee (4)</th>
             </tr>
             <tr>
-              <td>Jill</td>
-              <td>Smith</td>
-              <td>50</td>
-              <td>94</td>
+              <td><input style="border-bottom: 0ch; text-align: center;width: 5ch;" type="text" name="nominee_name" id ="nominee_name" #nominee_name="ngModel" [(ngModel)]="nominations[1].n_name" required>
+              </td>
+              <td><input style="border-bottom: 0ch; text-align: center;width: 5ch;" type="text"  name="n_address" id ="n_address" #Address="ngModel" [(ngModel)]="nominations[1].n_address" required>
+              </td>
+              <td><input style="border-bottom: 0ch; text-align: center;width: 5ch;" type="text" name="n_relation" id ="n_relation" #Address="ngModel" [(ngModel)]="nominations[1].n_relation" required>
+              </td>
+              <td>
+              <input type="text" style="border-bottom: 0ch; text-align: center;width: 9ch;" name="dob" id ="dob" #dob="ngModel" [(ngModel)]="nominations[2].n_dob" required>
+              </td>
+              <td><input type="text" style="border-bottom: 0ch; text-align: center;width: 5ch;" name="n_amount" id ="n_amount" #Address="ngModel" [(ngModel)]="nominations[1].n_amount" required>
+              </td>
+              
             </tr>
-            <tr>
-              <td>Eve</td>
-              <td>Jackson</td>
-              <td>94</td>
-              <td>94</td>
-            </tr>
-            <tr>
-              <td>John</td>
-              <td>Doe</td>
-              <td>80</td>
-              <td>94</td>
-            </tr>
-            <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>80</td>
-                <td>94</td>
-              </tr>
+            
           </table>
           <br>
      

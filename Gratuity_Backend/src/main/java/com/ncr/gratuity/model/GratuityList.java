@@ -52,8 +52,20 @@ public class GratuityList {
     
     @Column(name= "n_amount")
     private String n_amount;
+    
+    @Column(name= "eps_no")
+    private String eps_no;
+    
    
-    @Column(name= "w1_sig")
+    public String getEps_no() {
+		return eps_no;
+	}
+
+	public void setEps_no(String eps_no) {
+		this.eps_no = eps_no;
+	}
+
+	@Column(name= "w1_sig")
     private String w1_sig;
     
     @Column(name= "w2_sig")
