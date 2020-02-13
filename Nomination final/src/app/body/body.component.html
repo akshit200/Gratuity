@@ -1,9 +1,9 @@
 
 <div class="container">
-<h2> Form OF NOMINATION</h2>
+<h2>FORM OF NOMINATION</h2>
 <h2>EMPLOYEES GOUP GRATUITY FORM</h2>
 <form method="POST"action="">
-<label for="firstname">ANHSA</label>
+<label for="firstname">First Name</label>
 <input type="text"[(ngModel)]="firstname" ngModel #firstName="ngModel"(change)="log(firstname)"placeholder="Enter First Name"name="firstname"required>
 <div class="alert alert-danger *ngIf="firstName.touched && !firstName.valid>Required</div>
 <label for="lastname">Last Name</label>
