@@ -33,10 +33,22 @@ input[type=text] {
     display: block; 
     margin-bottom: 1em; 
 }
+
+.brm { 
+  display: block; 
+  margin-bottom: 0.2em; 
+}
+
 div.bg{
     background-color: green;
 }
 
+.previous {
+  float: left;
+  }
+  .next {
+  float: right;
+  }
 
 table#t01 {
     width: 100%;
@@ -71,7 +83,7 @@ table#t01 {
 
 .ab{
     text-align: right;
-    margin-right: 35px;
+    margin-right: 125px;
 }
 
 .bc{

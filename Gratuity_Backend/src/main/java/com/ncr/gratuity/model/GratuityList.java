@@ -2,6 +2,9 @@ package com.ncr.gratuity.model;
 
 import javax.persistence.*;
 
+import java.sql.Date;
+import java.text.DateFormat;
+
 @Entity
 @Table(name = "GratuityFields")
 public class GratuityList {   
@@ -30,7 +33,7 @@ public class GratuityList {
     private String marital_status;
     
     @Column(name= "DOB")
-    private String dob;
+    private Date dob;
     
     @Column(name= "paddress")
     private String paddress;
@@ -48,7 +51,7 @@ public class GratuityList {
     private String n_relation;
     
     @Column(name= "n_dob")
-    private String n_dob;
+    private Date n_dob;
     
     @Column(name= "n_amount")
     private String n_amount;
@@ -124,11 +127,11 @@ public class GratuityList {
 		this.n_relation = n_relation;
 	}
 
-	public String getN_age() {
+	public Date getN_age() {
 		return n_dob;
 	}
 
-	public void setN_age(String n_dob) {
+	public void setN_age(Date n_dob) {
 		this.n_dob = n_dob;
 	}
 
@@ -156,11 +159,11 @@ public class GratuityList {
 		this.marital_status = marital_status;
 	}
 
-	public String getDob() {
+	public Date getDob() {
 		return dob;
 	}
 
-	public void setDob(String dob) {
+	public void setDob(Date dob) {
 		this.dob = dob;
 	}
 

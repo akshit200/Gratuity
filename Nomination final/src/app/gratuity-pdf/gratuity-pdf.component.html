@@ -1,6 +1,10 @@
 <div class="a">
     <div class="pad">
-      <h2 class="calign">Gratuity Form</h2>
+      <br>
+      <div style="text-align: center;">
+        <H4><u><b> GRATUITY FORM </b></u></H4>  
+    </div>
+    <br>
       <!-- <h3 class="calign">FORM OF NOMINATION</h3>
       <h3 class="calign">EMPLOYEE GROUP GRATUITY FUND</h3> -->
       <span class="brmedium"></span>
@@ -28,9 +32,13 @@
         
         <span class="brmedium"></span>
 
+<<<<<<< HEAD
         5. Marital Status  <input type="text"  name="mar_status" [(ngModel)]="nominations[1].marital_status"  #mar_status="ngModel" required>
       
         <!-- <input type="radio" name="status" value="unmarried" checked> Unmarried
+=======
+        5. Marital Status : <input type="radio" name="status" value="unmarried" checked> Unmarried
+>>>>>>> 68a633542524cc52b67c9865cdb3b18689f4ad3f
         <input type="radio" name="status" value="married"> Married
         <input type="radio" name="status" value="widow"> Widow or Widower -->
         <span class="brmedium"></span>
@@ -41,10 +49,14 @@
         <span class="brmedium"></span>
 
         7. Permanent Address :
+<<<<<<< HEAD
         <input type="text" [(ngModel)]="nominations[1].paddress"  #address="ngModel" placeholder="Enter Address" name="address" required>
       
+=======
+        <input type="text" class="dotted" ng-required="expression"> 
+>>>>>>> 68a633542524cc52b67c9865cdb3b18689f4ad3f
         <span class="brmedium"></span>
-        I hereby nominate the person(s): cancel the nomination made by me previously and nominate the person(s) mentioned below
+        I hereby nominate the person(s): cancel the nominations made by me previously and nominate the person(s) mentioned below
         to receive the Amount of Gratuity in the event of my death before that amount becomes payable, or having become payable,
         has not been paid, and direct that the amount shall be distributed among the said person(s) in the manner shown against
         their names:
@@ -86,12 +98,9 @@
         *2.  Certified that my father/mother/sister(s)/minor brother(s) is/are dependent upon me.
             <span class="brmedium"></span>
 
-        *3. I have excluded my husband from my family by a notice dated <input type="text" ng-required="expression">  to the controlling authority in terms of the proviso to
+        *3. I have excluded my husband from my family by a notice dated <input type="text" ng-required="expression">  to the controlling authority in terms of the Proviso to
         Section 2(h) of the Payment of Gratuity Act, 1972.
             <span class="brmedium"></span>
-
-        *3. I have excluded my husband from my family by a notice dated <input type="text" ng-required="expression">  to the controlling authority in terms of the proviso to
-        <span class="brmedium"></span>
         
         Dated this <input type="text" ng-required="expression"> day of <input type="text" ng-required="expression">200<input type="text" ng-required="expression">at<input type="text" ng-required="expression">
         <span class="brmedium"></span>
@@ -104,24 +113,30 @@
 
         <span class="brmedium"></span>
 
+        <div class="ab">
+          <input type="text">
+        </div>
+
+        <br>
+
         <div class="none">
         Employee Signature:
         </div>    
         <span class="brmedium"></span> 
 
-        <div class="ab">
-        <input type="file" accept="image/*" ng-required="expression">
-        </div>
         
-        <span class="brmedium"></span>
+        
+        <span class="brm"></span>
         Certified that the above nomination has been signed by
-        <span class="brmedium"></span>
+        <span class="brm"></span>
         Shri/Smt <input type="text" ng-required="expression">and the same have been verified and recorded in this establishment.
-        <span class="brmedium"></span>
+        <span class="brm"></span>
 
+        <br>
         Date: <input type="date"> 
+
         <div class="ab">
-        For <input type="file" accept="image/*" ng-required="expression">
+        For <input type="text" >
         </div>
         <span class="brmedium"></span>
         <div class="bc">
@@ -132,6 +147,25 @@
         <span class="brmedium"></span>
         <br>
         <br>
+        
+        <div class="row">
+          <div class="col-6 text-left">
+              <div class="previous">
+                <a 
+                routerLink="/container" type="submit" class="btn btn-success">back
+                    <span class=""></span>
+                  </a>
+  
+              </div>
+          </div>
+          <div class="col-6 text-right">
+              <div class="next">
+                <button class="btn btn-success">Submit
+                      <span class=""></span>
+                  </button>
+              </div>
+          </div>
+      </div>
 
         <div class="aa">
         NCR Confidential

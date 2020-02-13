@@ -7,6 +7,10 @@
   text-align: center;
 }
 
+.brmedium { 
+  display: block; 
+  margin-bottom: 1em; 
+}
 
 .form-container{
   margin:1rem auto;
