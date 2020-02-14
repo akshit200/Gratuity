@@ -1,4 +1,5 @@
 export class User {
+  id:Int16Array;
   firstName: string;
   lastName: string;
   dob: string;

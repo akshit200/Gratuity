@@ -54,6 +54,10 @@ public class GratuityRepository {
 		return toDoCrudRepository.findAll();
 	}
 	*/
+	public Optional<GratuityList> findById(long id)
+	{
+		return gratuityCrudRepository.findById(id);
+	}
 	public void deleteAll()
 	{
 		gratuityCrudRepository.deleteAll();

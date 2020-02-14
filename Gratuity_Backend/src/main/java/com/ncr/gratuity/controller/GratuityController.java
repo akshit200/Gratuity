@@ -32,17 +32,17 @@ public class GratuityController {
 	{
 		return gratuityService.getData();
 	}
-	//@GetMapping(value="/api/getDatabyId")
-	/*
-	public GratuityList getDataById(long id)
+	
+	@GetMapping(value="/api/findbyId")
+	public java.util.Optional<GratuityList> findById(long id)
 	{
-		Optional<GratuityList> emp =  gratuityService.getDataById(id);
-        if(!emp.isPresent())
-            throw new Exception("Could not find employee with id- " + id);
+		return  gratuityService.findById(id);
+    //    if(!emp.isPresent())
+   //         throw new Exception("Could not find employee with id- " + id);
  
-        return emp.get();
+ //       return emp.get();
 		
-	}*/
+	}
 	
 	@PutMapping(value="/api/updateData/{id}")
 	public void updateData(@RequestParam String n_name, @RequestParam String n_address,@RequestParam String n_dob,@RequestParam String n_relation,@RequestParam String n_amount, @PathVariable Long id)

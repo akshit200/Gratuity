@@ -11,14 +11,16 @@ export class UserService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  private userUrl = 'http://localhost:9001/hr_Portal'; // change this path with your backend machine name
+  private userUrl = 'http://localhost:4040/todo'; // change this path with your backend machine name
 
   constructor(
     private http: HttpClient
   ) { }
 
    public getUser(): Observable<any> {
-     const url = `${this.userUrl}/api/hr_Portal/getTask`;
+    //http://localhost:8080/todo/api/getData
+
+     const url = `${this.userUrl}/api/getData`;
      console.log('>>>>>' + url);
      return this.http.get(url);
    }
@@ -26,10 +28,9 @@ export class UserService {
   // tslint:disable-next-line: max-line-length
   public addUser(user: { firstName: any; lastName: any; dob: any; gender: any; contact_Number: any; email_Id: any; password: any; confirm_password: any; }): Observable<any> {
     // tslint:disable-next-line: max-line-length
-    const url = `${this.userUrl}/api/hr_Portal/createTask?firstName=${user.firstName}&lastName=${user.lastName}&dob=${user.dob}&gender=${user.gender}&contact_Number=${user.contact_Number}&email_Id=${user.email_Id}&password=${user.password}&confirm_password=${user.confirm_password}`;
-
+    //const url = `${this.userUrl}/api/hr_Portal/createTask?firstName=${user.firstName}&lastName=${user.lastName}&dob=${user.dob}&gender=${user.gender}&contact_Number=${user.contact_Number}&email_Id=${user.email_Id}&password=${user.password}&confirm_password=${user.confirm_password}`;
+    //http://localhost:8080/todo/api/updateData/2?n_name=Bhuwan&n_address=RZ-42&n_dob=27%2F01%2F1998&n_relation=FWB&n_amount=2121
+    const url = `${this.userUrl}/api/updateData/${user.id}?firstName=${user.firstName}&lastName=${user.lastName}&dob=${user.dob}&gender=${user.gender}&contact_Number=${user.contact_Number}&email_Id=${user.email_Id}`;
     return this.http.put(url, null);
   }
-
-
 }

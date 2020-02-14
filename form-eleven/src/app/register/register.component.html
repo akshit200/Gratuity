@@ -15,8 +15,6 @@
       <input type="text" placeholder="{{nomineeValue}}" *ngIf="nomineeValue=='Spouse Name'"/> 
 
 
-
-
       <label for="dob">Date of Birth</label>
       <input type="date" name="dob" [(ngModel)]="newUser.dOB"  #dob="ngModel" required>
       <div class="error-msg" *ngIf="dob.touched && !dob.valid">*Field is Required</div>

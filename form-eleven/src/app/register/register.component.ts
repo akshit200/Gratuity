@@ -17,7 +17,6 @@ export class RegisterComponent implements OnInit {
     return;
   }
 
-
   submitted = false;
 
   newUser = {
@@ -29,7 +28,6 @@ export class RegisterComponent implements OnInit {
     email_Id: '',
     password: '',
     confirm_password: '',
-
   };
   userList = [];
 
@@ -56,7 +54,5 @@ export class RegisterComponent implements OnInit {
           console.log('fail');
         }
       });
-
     }
-
   }
