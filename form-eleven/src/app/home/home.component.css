@@ -1,0 +1,28 @@
+.main-container{
+  margin-top: 90px;
+  height:70vh;
+  padding: 20px;
+  text-align: center;
+}
+.main-container span{
+  color:#54b948;
+}
+.user-container{
+    display: grid;
+    grid-template-columns: auto 70px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 5px;
+}
+.profile-img-container{
+    all: unset;
+    justify-self: center;
+    align-self: center;
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.profile-img-container img{
+    border-radius: 50%;
+}

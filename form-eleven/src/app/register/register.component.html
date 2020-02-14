@@ -1,0 +1,114 @@
+<div class="main-container">
+    <h1 class="main-heading">Form-11(EPF Scheme)</h1>
+    <form #userFrom="ngForm" (ngSubmit)="onSubmit(userFrom)" class="form-container">
+      <label for="firstname">Full Name</label>
+      <input type="text" [(ngModel)]="newUser.firstName"  #firstname="ngModel" placeholder="Enter First Name" name="firstname" required>
+      <div class="error-msg" *ngIf="firstname.touched && !firstname.valid">*Field is Required</div>
+
+      <label for="nominee">Father/Spouse Name</label>
+      <select name="nominee" id="nominee" [(ngModel)]="nomineeValue"  required>
+        <option value="Father Name">Father Name</option>
+        <option value="Spouse Name">Spouse Name</option>
+      </select>
+      <div class="error-msg" *ngIf="gender.touched && !gender.valid">*Field is Required</div>
+      <input type="text" placeholder="{{nomineeValue}}" *ngIf="nomineeValue=='Father Name'"/> 
+      <input type="text" placeholder="{{nomineeValue}}" *ngIf="nomineeValue=='Spouse Name'"/> 
+
+
+
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" name="dob" [(ngModel)]="newUser.dOB"  #dob="ngModel" required>
+      <div class="error-msg" *ngIf="dob.touched && !dob.valid">*Field is Required</div>
+
+      <label for="gender">Gender</label>
+      <select name="gender" id="gender" [(ngModel)]="newUser.genderUser"  #gender="ngModel" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="others">Others</option>
+      </select>
+      <div class="error-msg" *ngIf="gender.touched && !gender.valid">*Field is Required</div>
+
+      <label for="martialstatus">Martial Status</label>
+      <select name="martialstatus" id="gender" [(ngModel)]="newUser.martialstatus"  #gender="ngModel" required>
+        <option value="male">Married</option>
+        <option value="female">Unmarried</option>
+        <option value="others">Widow</option>
+        <option value="others">Widower</option>
+        <option value="others">Divorcee</option>
+      </select>
+      <div class="error-msg" *ngIf="gender.touched && !gender.valid">*Field is Required</div>
+
+
+      <label for="contact_Number">Contact Number</label>
+      <input type="number" pattern="[0-9]{10}" name="contact_Number" maxlength="10" [(ngModel)]="newUser.contact_Number" #contact_Number="ngModel" placeholder="Enter Phone Number" required>
+      <div class="error-msg" *ngIf="contact_Number.touched && !contact_Number.valid">*Field is Required</div>
+
+      <label for="email">Email ID</label>
+      <input type="email" placeholder="Enter Email" name="email"  [(ngModel)]="newUser.email_Id" #email_Id="ngModel" required>
+      <div class="error-msg" *ngIf="email_Id.touched && !email_Id.valid">*Field is Required</div>
+
+      <label for="Previous EPF Scheme">Previous EPF Scheme</label>
+      <select name="Previous EPF Scheme" id="Previous EPF Scheme" [(ngModel)]="schemeValue"  required>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      <!-- <div class="error-msg" *ngIf="gender.touched && !gender.valid">*Field is Required</div> -->
+
+      <label for="Previous EPS Scheme">Previous EPS Scheme</label>
+      <select name="Previous EPS Scheme" id="Previous EPS Scheme"  required>
+        <option  value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      <!-- <div class="error-msg" *ngIf="g.touched && !gender.valid">*Field is Required</div> -->
+      
+        <label for="UAN"  *ngIf="schemeValue=='yes'" >Universal Account Number</label>
+        <input type="text" placeholder="Universal Acoount Number" *ngIf="schemeValue=='yes'"/> 
+        <label for="UAN"  *ngIf="schemeValue=='yes'" >Previous PF Acoount Number</label>
+        <input type="text" placeholder="Previous PF Acoount Number" *ngIf="schemeValue=='yes'"/> 
+        <label for="UAN"  *ngIf="schemeValue=='yes'" >Date of Exit from Previous Employment</label>
+        <input type="date" placeholder="Date of exit from Previous Employement" *ngIf="schemeValue=='yes'"/> 
+        <label for="UAN"  *ngIf="schemeValue=='yes'" >SchemeValue</label>
+        <input type="text" placeholder="Scheme Certificate Number" *ngIf="schemeValue=='yes'"/> 
+        <label for="UAN"  *ngIf="schemeValue=='yes'" >PPO Number</label>
+        <input type="text" placeholder="PPO Number" *ngIf="schemeValue=='yes'"/> 
+
+
+        <label for="International Worker">International Worker</label>
+        <select name="International Worker" id="International Worker" [(ngModel)]="workerValue"  required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <label for="restate"  *ngIf="workerValue=='yes'" >Country of Origin</label>
+        <input type="text" placeholder="Country of Origin" *ngIf="workerValue=='yes'"/> 
+        <label for="Passport"  *ngIf="workerValue=='yes'" >Passport Number</label>
+        <input type="text" placeholder="Passport Number" *ngIf="workerValue=='yes'"/> 
+        <label for="From"  *ngIf="workerValue=='yes'" >Validity Of Passport (From)</label>
+        <input type="date" placeholder="" *ngIf="workerValue=='yes'"/> 
+        <label for="To"  *ngIf="workerValue=='yes'" >Validity Of Passport (To)</label>
+        <input type="date" placeholder="" *ngIf="workerValue=='yes'"/> 
+
+
+      <label for="BANumber">Bank Account Number</label>
+      <input type="text" name="BANumber" [(ngModel)]="newUser.BANumber"  placeholder="" required>
+      <div class="error-msg" *ngIf="BANumber.touched && !BANumber.valid">*Field is Required</div>
+
+
+      <label for="IFSC Code">IFSC Code</label>
+      <input type="text" name="IFSC Code"  [(ngModel)]="newUser.IFSCCode"  placeholder="IFSC Code" required>
+      <div class="error-msg" *ngIf="IFSC_Code.touched && !IFSC_Code.valid">*Field is Required</div>
+
+      <label for="aANumber">AADHAR Number</label>
+      <input type="number" pattern="/^[1-9][0-9]{5}$/" name="aANumber" [(ngModel)]="newUser.aANumber" required>
+      <div class="error-msg" *ngIf="aANumber.touched && !aANumber.valid">*Field is Required</div>
+
+      <label for="pANumber">Permanent Account Number</label>
+      <input type="text" name="BANumber" [(ngModel)]="newUser.pANumber"  placeholder="" required>
+      <div class="error-msg" *ngIf="pANumber.touched && !pANumber.valid">*Field is Required</div>
+
+      <input type="submit"  >
+      <!-- <a *ngIf="submitted" routerLink="/">Done</a> -->
+    </form>
+  </div>
+

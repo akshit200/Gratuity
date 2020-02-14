@@ -1,0 +1,58 @@
+.main-header{
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    top:0;
+    right: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #54b948;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 1rem 0 0;
+}
+
+.logo-container{
+    height: 100%;
+    outline: none;
+    cursor: pointer;
+}
+
+.logo-container img{
+  outline: none;
+}
+.user-profile-nav{
+    box-shadow: 0 2px 8px 0 rgba(46,50,60,.27);
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    right: 0.5rem;
+    top: 6rem;
+    border-radius: 5px;
+    width:200px;
+}
+.user-profile-menu{
+    padding: 1rem;
+    list-style-type: none;
+    margin: 0;
+}
+.user-profile-menu-item{
+    margin:0.5rem 0;
+}
+
+.user-profile-menu-item a{
+    text-decoration: none;
+    color: #000;
+    /* font-weight: 600; */
+    transition: all 0.2s;
+}
+.user-profile-menu-item a:hover,
+.user-profile-menu-item a:active{
+    color:#54b948;
+}
+
+
+.display{
+    display: block;
+}
