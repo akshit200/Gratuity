@@ -1,11 +1,12 @@
 package HQL;
 import java.util.List;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+
 import javax.persistence.Query;
 
 import org.springframework.transaction.annotation.Transactional;
-import com.ncr.gratuity.model.GratuityList;
+
+import com.ncr.gratuity.model.FormModel;
 @Transactional
 public class HibernateQuerries
 {
@@ -17,7 +18,7 @@ public class HibernateQuerries
 		super();
 		this.em = em;
 	}
-	public Iterable<GratuityList> getData()
+	public Iterable<FormModel> getData()
 	{
 		//List result=em.createNativeQuery("Select * from List"); 
 		List result=em.createQuery("from GratuityList").getResultList();
@@ -49,5 +50,8 @@ public class HibernateQuerries
 	
 		query.executeUpdate();
 	}
+											/*Nomination */
 	
+	
+
 }

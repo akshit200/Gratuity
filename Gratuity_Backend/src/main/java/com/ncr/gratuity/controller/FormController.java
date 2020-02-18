@@ -13,37 +13,64 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.google.common.base.Optional;
-import com.ncr.gratuity.model.GratuityList;
-import com.ncr.gratuity.service.GratuityService;
+import com.ncr.gratuity.ValueObjects.EpsVo;
+import com.ncr.gratuity.ValueObjects.NomineeVo;
+import com.ncr.gratuity.model.FormModel;
+
+import com.ncr.gratuity.service.FormService;
+
 
 import io.swagger.annotations.ApiOperation;
 
 @RestController
 @ControllerAdvice
 @CrossOrigin(origins = "http://localhost:4200")
-public class GratuityController {
+public class FormController {
 
 	@Autowired
-	GratuityService gratuityService;
+	FormService formService;
 	
+				/*--------------------/
+			 	* --------------------/
+			 	* ------EPS FORM------/
+			 	* --------------------/
+			 	* --------------------*/
+	
+
 	@ApiOperation(value="",notes="")
-	@GetMapping(value="/api/getData")
-	public Iterable<GratuityList> getData() 
+	@GetMapping(value="/api/get_eps_data")
+	public EpsVo getEpsData(@RequestParam Long id)
 	{
-		return gratuityService.getData();
+		return formService.getEpsData(id);
+		
+	}
+	
+	@PostMapping(value="/api/save_eps_data")
+	public EpsVo saveEpsData(@RequestBody EpsVo epsVo)
+	{
+		return formService.saveEpsData(epsVo);
+		
+	}
+	
+	
+	/*
+	@GetMapping(value="/api/getData")
+	public Iterable<> getData() 
+	{
+		return formService.getData();
 	}
 	
 	@GetMapping(value="/api/findbyId")
-	public java.util.Optional<GratuityList> findById(long id)
+	public java.util.Optional<FormModel> findById(long id)
 	{
-		return  gratuityService.findById(id);
+		return  formService.findById(id);
     //    if(!emp.isPresent())
    //         throw new Exception("Could not find employee with id- " + id);
  
  //       return emp.get();
 		
 	}
-	
+	/*
 	@PutMapping(value="/api/updateData/{id}")
 	public void updateData(@RequestParam String n_name, @RequestParam String n_address,@RequestParam String n_dob,@RequestParam String n_relation,@RequestParam String n_amount, @PathVariable Long id)
 	{
@@ -58,6 +85,22 @@ public class GratuityController {
 		
 	    // Optional<GratuityList> emp =  gratuityService.getDatabyId(id);
 	}
+	
+	@PutMapping(value="/api/updateData/{id}")
+	public void updateNomineeData(NomineeVo nomineeVo)
+	{
+		
+		System.out.println("name"+nomineeVo.getN_name());
+		System.out.println("n_address"+nomineeVo.getN_address());
+		System.out.println("n_dob"+nomineeVo.getN_dob());
+		System.out.println("n_relation"+nomineeVo.getN_relation());
+		System.out.println("n_amount"+nomineeVo.getN_amount());
+		System.out.println("id"+id);
+		gratuityService.updateNomineeData(nomineeVo);
+		
+	    // Optional<GratuityList> emp =  gratuityService.getDatabyId(id);
+	}
+	*/
 	/*
 	@RequestMapping(value= "/employee/update/{id}", method= RequestMethod.PUT)
     public Employee updateEmployee(@RequestBody Employee updemp, @PathVariable int id) throws Exception {
