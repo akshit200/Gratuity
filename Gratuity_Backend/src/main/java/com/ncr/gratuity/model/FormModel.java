@@ -54,11 +54,19 @@ public class FormModel {
    
     private Set<NomineeList> nomineeList;
     
- 
-	
-    @Column(name= "Email")
-    private String email;
     
+    public Set<NomineeList> getNomineeList() {
+		return nomineeList;
+	}
+
+	public void setNomineeList(Set<NomineeList> nomineeList) {
+		this.nomineeList = nomineeList;
+	}
+	    
+	/******************************			
+	 *		Gratuity Form
+	 ******************************/ 
+	
     @Column(name= "FatherName")
     private String father_name;
     
@@ -84,23 +92,105 @@ public class FormModel {
     @Column(name= "emp_sig")
     private String emp_sig;
     
+    /******************************			
+	 *		Form 11
+	 ******************************/ 
+    
+    @Column(name= "Email_Id")
+    private String Email_Id;
   
-    public String getW1_sig() {
+    @Column(name= "Mobile_no")
+    private String Mobile_no;
+    
+    @Column(name= "Scheme_1952")
+    private Boolean Scheme_1952;
+    
+    @Column(name= "Scheme_1955")
+    private Boolean Scheme_1955;
+    
+    @Column(name= "International_worker")
+    private Boolean International_worker;
+    
+    @Column(name= "IFS_Code")
+    private String IFS_Code;
+
+    @Column(name= "Aadhar_no")
+    private String Aadhar_no;
+    
+    @Column(name= "PAN_no")
+    private String PAN_no;
+    
+    public String getEmail_Id() {
+		return Email_Id;
+	}
+
+	public void setEmail_Id(String email_Id) {
+		Email_Id = email_Id;
+	}
+
+	public String getMobile_no() {
+		return Mobile_no;
+	}
+
+	public void setMobile_no(String mobile_no) {
+		Mobile_no = mobile_no;
+	}
+
+	public Boolean getScheme_1952() {
+		return Scheme_1952;
+	}
+
+	public void setScheme_1952(Boolean scheme_1952) {
+		Scheme_1952 = scheme_1952;
+	}
+
+	public Boolean getScheme_1955() {
+		return Scheme_1955;
+	}
+
+	public void setScheme_1955(Boolean scheme_1955) {
+		Scheme_1955 = scheme_1955;
+	}
+
+	public Boolean getInternational_worker() {
+		return International_worker;
+	}
+
+	public void setInternational_worker(Boolean international_worker) {
+		International_worker = international_worker;
+	}
+
+	public String getIFS_Code() {
+		return IFS_Code;
+	}
+
+	public void setIFS_Code(String iFS_Code) {
+		IFS_Code = iFS_Code;
+	}
+
+	public String getAadhar_no() {
+		return Aadhar_no;
+	}
+
+	public void setAadhar_no(String aadhar_no) {
+		Aadhar_no = aadhar_no;
+	}
+
+	public String getPAN_no() {
+		return PAN_no;
+	}
+
+	public void setPAN_no(String pAN_no) {
+		PAN_no = pAN_no;
+	}
+
+	public String getW1_sig() {
 		return w1_sig;
 	}
 
 	public void setW1_sig(String w1_sig) {
 		this.w1_sig = w1_sig;
 	}
-
-  
-    public String getEmail() {
-		return email;
-	}
-    public void setEmail(String email) {
-		this.email=email;
-	}
-    
     
     public String getMarital_status() {
 		return marital_status;
@@ -109,6 +199,22 @@ public class FormModel {
 	public void setMarital_status(String marital_status) {
 		this.marital_status = marital_status;
 	}
+   
+	public String getW2_sig() {
+		return w2_sig;
+	}
+	public void setW2_sig(String w2_sig) {
+		this.w2_sig = w2_sig;
+	}
+	
+	public String getEmp_sig() {
+		return emp_sig;
+	}
+
+	public void setEmp_sig(String emp_sig) {
+		this.emp_sig = emp_sig;
+	}
+		
 
 	public Date getDob() {
 		return dob;
@@ -118,34 +224,12 @@ public class FormModel {
 		this.dob = dob;
 	}
 
-   
-	
-    
-	public String getW2_sig() {
-		return w2_sig;
+	public void setForm_id(Long form_id) {
+		this.form_id = form_id;
 	}
-	public void setW2_sig(String w2_sig) {
-		this.w2_sig = w2_sig;
-	}
-
-	
-	
-	public String getEmp_sig() {
-		return emp_sig;
-	}
-
-	public void setEmp_sig(String emp_sig) {
-		this.emp_sig = emp_sig;
-	}
-	
-	
 
 	public Long getForm_id() {
 		return form_id;
-	}
-
-	public void setID(Long form_id) {
-		this.form_id = form_id;
 	}
 	
     public String getLast_name() {
@@ -171,48 +255,7 @@ public class FormModel {
 	public void setFirst_name(String first_name) {
 		this.first_name=first_name;
 	}
-	    
-/*
-	public String getN_name() {
-		return n_name;
-	}
 
-	public void setN_name(String n_name) {
-		this.n_name = n_name;
-	}
-
-	public String getN_address() {
-		return n_address;
-	}
-
-	public void setN_address(String n_address) {
-		this.n_address = n_address;
-	}
-
-	public String getN_relation() {
-		return n_relation;
-	}
-
-	public void setN_relation(String n_relation) {
-		this.n_relation = n_relation;
-	}
-
-	public Date getN_age() {
-		return n_dob;
-	}
-
-	public void setN_age(Date n_dob) {
-		this.n_dob = n_dob;
-	}
-
-	public String getN_amount() {
-		return n_amount;
-	}
-
-	public void setN_amount(String n_amount) {
-		this.n_amount = n_amount;
-	}
-*/
 	public String getReligion() {
 		return religion;
 	}
@@ -238,14 +281,6 @@ public class FormModel {
 		this.ehusband = ehusband;
 	}
 
-//	public String getName() {
-//		return name;
-//	}
-//
-//	public void setName(String name) {
-//		this.name = name;
-//	}
-
 	public String getFather_name() {
 		return father_name;
 	}
@@ -270,25 +305,7 @@ public class FormModel {
 		this.emp_no = emp_no;
 	}
 
-	   
-    public Set<NomineeList> getNomineeList() {
-		return nomineeList;
-	}
-
-	public void setNomineeList(Set<NomineeList> nomineeList) {
-		this.nomineeList = nomineeList;
-	}
-	    
-
-
-
 }
-
-//@Column(name= "Religion")
-//private long religion;
-//
-//@Column(name= "Marital_Status")
-//private long marital_status;
 
 
 //RS185540
