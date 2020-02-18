@@ -1,17 +1,31 @@
 package com.ncr.gratuity.ValueObjects;
 
+import java.util.Date;
+//import java.io.Serializable;
+import java.util.Set;
 
+import com.ncr.gratuity.model.NomineeList;
 
 public class EpsVo {
 	
-    private long id;
+    private Long id;
 	private String first_name;
     private String last_name;
-    private String dob;
+    private Date dob;
     private String marital_status;
     private String paddress;
     private String eps_no;
     
+    private Set<NomineeList> nomineeList;
+    
+    public Set<NomineeList> getNomineeList() {
+		return nomineeList;
+	}
+
+	public void setNomineeList(Set<NomineeList> nomineeList) {
+		this.nomineeList = nomineeList;
+	}
+	    
     
 	public String getFirst_name() {
 		return first_name;
@@ -25,12 +39,20 @@ public class EpsVo {
 	public void setLast_name(String last_name) {
 		this.last_name = last_name;
 	}
-	public String getDob() {
+	
+	public Date getDob() {
 		return dob;
 	}
-	public void setDob(String dob) {
+
+	public void setDob(Date dob) {
 		this.dob = dob;
 	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	
 	public String getMarital_status() {
 		return marital_status;
 	}

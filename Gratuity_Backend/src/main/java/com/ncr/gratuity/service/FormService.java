@@ -7,8 +7,7 @@ import org.springframework.stereotype.Service;
 
 
 import com.ncr.gratuity.ValueObjects.EpsVo;
-
-
+import com.ncr.gratuity.model.FormModel;
 import com.ncr.gratuity.repository.FormRepository;
 
 
@@ -28,9 +27,9 @@ public class FormService {
 		return formRepository.getEpsData(id);
 	}
 
-	public EpsVo saveEpsData(EpsVo epsVo)
+	public String saveEpsData(FormModel formModel)
 	{
-		return formRepository.saveEpsData(epsVo);
+		return formRepository.saveEpsData(formModel);
 	}
 	/*
 	public void updateData(String n_name,String n_address,String n_dob,String n_relation,String n_amount,Long id)

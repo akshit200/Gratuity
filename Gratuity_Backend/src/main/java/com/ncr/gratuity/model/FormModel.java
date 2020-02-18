@@ -1,14 +1,22 @@
 package com.ncr.gratuity.model;
 
-import javax.persistence.*;
+import java.util.Date;
+
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-import java.io.Serializable;
-import java.sql.Date;
-import java.util.List;
-import java.util.Set;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 
 
@@ -21,11 +29,6 @@ public class FormModel {
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long form_id;
-    
-    
-    				/******************************			
-    				 *		EPS Nomination Form
-    				 ******************************/
     
     @Column(name= "First_Name")
     private String first_name;
@@ -46,20 +49,12 @@ public class FormModel {
     @Column(name= "eps_no")
     private String eps_no;
     
-    
-    @OneToMany(mappedBy="formModel")
-    @JsonIgnore
+    @JsonManagedReference
+    @OneToMany(fetch = FetchType.EAGER,cascade=CascadeType.ALL,mappedBy="formModel")
+   
     private Set<NomineeList> nomineeList;
     
-    
-    public Set<NomineeList> getNomineeList() {
-		return nomineeList;
-	}
-
-	public void setNomineeList(Set<NomineeList> nomineeList) {
-		this.nomineeList = nomineeList;
-	}
-	    
+ 
 	
     @Column(name= "Email")
     private String email;
@@ -275,7 +270,15 @@ public class FormModel {
 		this.emp_no = emp_no;
 	}
 
-    
+	   
+    public Set<NomineeList> getNomineeList() {
+		return nomineeList;
+	}
+
+	public void setNomineeList(Set<NomineeList> nomineeList) {
+		this.nomineeList = nomineeList;
+	}
+	    
 
 
 

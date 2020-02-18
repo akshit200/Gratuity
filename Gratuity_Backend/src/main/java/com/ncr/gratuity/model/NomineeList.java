@@ -1,25 +1,29 @@
 package com.ncr.gratuity.model;
-import java.sql.Date;
-import java.io.Serializable;
+import java.util.Date;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 @Entity
 @Table(name="NomineeFields")
-public class NomineeList implements Serializable {
+public class NomineeList {
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
     private Long NomineeID;
 	
+	@JsonBackReference
 	@ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="form_id", nullable=false)
 	private FormModel formModel;
-	
 	
 	
     @Column(name= "n_name")

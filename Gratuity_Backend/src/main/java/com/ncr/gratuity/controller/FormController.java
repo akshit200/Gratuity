@@ -45,10 +45,17 @@ public class FormController {
 		
 	}
 	
+//	@PostMapping(value="/api/save_eps_data")
+//	public EpsVo saveEpsData(@RequestBody EpsVo epsVo)
+//	{
+//		return formService.saveEpsData(epsVo);
+//		
+//	}
+//	
 	@PostMapping(value="/api/save_eps_data")
-	public EpsVo saveEpsData(@RequestBody EpsVo epsVo)
+	public String saveEpsData(@RequestBody FormModel formModel)
 	{
-		return formService.saveEpsData(epsVo);
+		return formService.saveEpsData(formModel);
 		
 	}
 	
