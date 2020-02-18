@@ -1,0 +1,165 @@
+
+<div class="main-container">
+  <div class="compiler" *ngIf="!submit">
+    <form (ngSubmit)="onSubmit()" #for="ngForm">  
+  <div style="text-align: center;">
+       <h3>FORM OF NOMINATION</h3>
+  <span style="display: block; margin-bottom: 1em; "></span>
+  <h3>EMPLOYEES GROUP GRATUITY FORM</h3>
+  <hr>
+ </div>
+</form>
+</div>
+
+  <form  class="form-container" > 
+
+    <label for="name">First Name</label>
+    <input type="text" [(ngModel)]="empName"  #name="ngModel" placeholder="Enter Name" name="name" required>
+    <div class="error-msg" *ngIf="name.touched && !name.valid">*Field is Required</div>
+
+    <label for="fname">Father's/Husband's Name (In Block Letters)</label>
+    <input type="text" [(ngModel)]="fName"  #fname="ngModel" placeholder="Father's/Husband's Name" name="fname" required>
+    <div class="error-msg" *ngIf="fname.touched && !fname.valid">*Field is Required-</div>
+      
+    <label for="gender">Gender</label>
+    <select name="gender" id="gender" [(ngModel)]="genderUser"  #gender="ngModel" required>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="others">Others</option>
+    </select>
+    <div class="error-msg" *ngIf="gender.touched && !gender.valid">*Field is Required</div>
+
+    <label for="emp_id">Employee No.</label>
+    <input type="text" [(ngModel)]="empNo"  #emp_id="ngModel" placeholder="Enter Employee No." name="emp_id" required>
+    <div class="error-msg" *ngIf="emp_id.touched && !emp_id.valid">*Field is Required</div>
+
+    <label for="religion">Religion</label>
+    <input type="text" [(ngModel)]="empReg"  #religion="ngModel" placeholder="Enter Religion" name="religion" required>
+    <div class="error-msg" *ngIf="religion.touched && !religion.valid">*Field is Required</div>
+
+    <label for="mar_status">Marital Status</label>
+    <select name="mar_status" id="mar_status" [(ngModel)]="marStatus"  #mar_status="ngModel" required>
+      <option value="Unmarried">Unmarried</option>
+      <option value="Married">Married</option>
+      <option value="Widow">Widow</option>
+      <option value="Widower">Widower</option>
+    </select>
+    <div class="error-msg" *ngIf="mar_status.touched && !mar_status.valid">*Field is Required</div>
+
+    <label for="dob">Date of Birth</label>
+    <input type="date" name="dob" [(ngModel)]="dOB"  #dob="ngModel" required>
+    <div class="error-msg" *ngIf="dob.touched && !dob.valid">*Field is Required</div>
+
+      
+    <label for="address">Permanent Address</label>
+    <input type="text" [(ngModel)]="empAddress"  #address="ngModel" placeholder="Enter Address" name="address" required>
+    <div class="error-msg" *ngIf="address.touched && !address.valid">*Field is Required</div>
+
+    <label for="date_ex">Date of exclusion of my husband from my family</label>
+    <input type="date" name="date_ex" [(ngModel)]="dateEx"  #date_ex="ngModel" required>
+    <div class="error-msg" *ngIf="date_ex.touched && !date_ex.valid">*Field is Required</div>
+
+
+    
+    <label >Nomination for Gratuity Amount (in case of death)</label>
+    <br>
+    <h5><b>**details of nominee or nominees</b></h5>
+
+    <!-- <div >
+      <table class="table1" >
+   
+      <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Relation</th>
+      <th>Age</th>
+      <th>Amount</th>
+      </tr>
+      <tr *ngFor="let obj of dataarray;let i = index">
+      <td><input type="text" name="name" [(ngModel)]="dataarray[i].name" required></td>
+      <td><input type="text" name="address" [(ngModel)]="dataarray[i].address"></td>
+      <td><input type="text" name="relation" [(ngModel)]="dataarray[i].relation"></td>
+      <td><input type="text" name="age" [(ngModel)]="dataarray[i].age"></td>
+      <td><input type="text" name="amount" [(ngModel)]="dataarray[i].amount"></td>
+      <button class="button-add" (click)="addform1()"><b>+</b></button>
+      <button class="button-rem" (click)="remform1(i)"><b>-</b></button>
+      
+   
+    </table>
+      
+      </div> -->
+
+
+<div id = "content">
+  <div class="form-group"[class.error]="contact_Number.touched && contact_Number.invalid" *ngFor="let container of containers,let i = index">
+ 
+
+        <label for="nominee_name">Nominee Name:</label>
+        <input type="text" name="nominee_name" id ="nominee_name" #nominee_name="ngModel" [(ngModel)]="containers[i].name" placeholder = "Enter Nominee Name" required>
+        <span class="error-msg" *ngIf="nominee_name.touched  && nominee_name.invalid">
+          *Field is required
+        </span>
+        <br>
+
+        <label for="Address">Address:</label>
+        <input type="text" name="Address" id ="Address" #Address="ngModel" [(ngModel)]="containers[i].Address" placeholder = "Enter Address" required>
+        <span class="error-msg" *ngIf="nominee_name.touched  && nominee_name.invalid">
+          *Field is required
+        </span>
+
+        <br>
+        <label for="Relation">Relation:</label>
+        <input type="text" name="Relation" id ="Relation" #Relation="ngModel" [(ngModel)]="containers[i].Relation" placeholder = "Enter Relation" required>
+        <span class="error-msg" *ngIf="Relation.touched  && Relation.invalid">
+          *Field is required
+        </span>
+        <br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="dob" id ="dob" #dob="ngModel" [(ngModel)]="containers[i].dob" required>
+        <span class="error-msg" *ngIf="dob.touched  && dob.invalid">
+          *Field is required
+        </span>
+
+        <span class="brmedium"></span>
+
+        <label for="Amount">Amount (%):</label>
+        <input type="number" name="Amount" id ="Amount" #Amount="ngModel" [(ngModel)]="containers[i].Amount" min="1" max="100" placeholder ="Enter Amount(1-100)" required>
+        <span class="error-msg" *ngIf="Amount.touched  && Amount.invalid">
+          *Field is required
+        </span>
+
+
+  <!-- <div class="error" *ngIf="!newTask.taskName && taskFrom.submitted">Please enter a valid taskname.</div> -->
+  </div>
+
+  <button (click)="add()">Add</button>
+  <button (click)="remove()">Remove</button>
+</div>
+
+    <br>
+    
+    <!-- <label for="wit_sign">First Witness Signature</label>
+    <input type="file" [(ngModel)]="witSign"  #wit_sign="ngModel" name="wit_sign" required>
+    <div class="error-msg" *ngIf="wit_sign.touched && !wit_sign.valid">*Field is Required</div>
+
+    <label for="wit_sign1">Second Witness Signature</label>
+    <input type="file" [(ngModel)]="witSign1"  #wit_sign1="ngModel" name="wit_sign1" required>
+    <div class="error-msg" *ngIf="wit_sign1.touched && !wit_sign1.valid">*Field is Required</div>
+
+    <label for="emp_sign">Signature of Employee</label>
+    <input type="file" [(ngModel)]="empSign"  #emp_sign="ngModel" name="emp_sign" required>
+    <div class="error-msg" *ngIf="emp_sign.touched && !emp_sign.valid">*Field is Required</div> -->
+
+    <!-- <label for="empr_sign">Signature of Employer</label>
+    <input type="file" [(ngModel)]="emprSign"  #empr_sign="ngModel" name="empr_sign" required>
+    <div class="error-msg" *ngIf="empr_sign.touched && !empr_sign.valid">*Field is Required</div> -->
+
+    
+    <!-- <input type="submit" value="Submit"> -->
+  <a style="margin-left:320px;" 
+  routerLink="/gratuity" type="submit" class="btn btn-success">Save and Preview</a>
+
+
+  </form>
+</div>

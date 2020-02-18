@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+*{
+  box-sizing: border-box;
+}
+
+html,body{
+  margin: 0;
+}
+
+app-document {
+  /* hide the printing component from @media screen */
+  display: none;
+}
+
+@media print {
+  /* invert the display (show/hide) properties of the main */
+  /* aplication component and the printing component       */
+
+  app-document{
+    display: block;
+  }
+
+  app-gratuity-pdf {
+    display: none;
+  }
+}

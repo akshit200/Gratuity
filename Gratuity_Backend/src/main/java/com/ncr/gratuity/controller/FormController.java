@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.google.common.base.Optional;
 import com.ncr.gratuity.ValueObjects.EpsVo;
+import com.ncr.gratuity.ValueObjects.GratuityVo;
 import com.ncr.gratuity.ValueObjects.NomineeVo;
 import com.ncr.gratuity.model.FormModel;
 
@@ -59,84 +60,21 @@ public class FormController {
 		
 	}
 	
+	/**************************Gratuity Form***********************************/
 	
-	/*
-	@GetMapping(value="/api/getData")
-	public Iterable<> getData() 
+	
+	@GetMapping(value="/api/get_gratuity_data")
+	public GratuityVo getGratuityData(@RequestParam Long id)
 	{
-		return formService.getData();
+		return formService.getGratuityData(id);
+		
 	}
 	
-	@GetMapping(value="/api/findbyId")
-	public java.util.Optional<FormModel> findById(long id)
+	@PostMapping(value="/api/save_gratuity_data")
+	public String saveGratuityData(@RequestBody FormModel formModel)
 	{
-		return  formService.findById(id);
-    //    if(!emp.isPresent())
-   //         throw new Exception("Could not find employee with id- " + id);
- 
- //       return emp.get();
+		return formService.saveGratuityData(formModel);
 		
 	}
-	/*
-	@PutMapping(value="/api/updateData/{id}")
-	public void updateData(@RequestParam String n_name, @RequestParam String n_address,@RequestParam String n_dob,@RequestParam String n_relation,@RequestParam String n_amount, @PathVariable Long id)
-	{
-		
-		System.out.println("name"+n_name);
-		System.out.println("n_address"+n_address);
-		System.out.println("n_dob"+n_dob);
-		System.out.println("n_relation"+n_relation);
-		System.out.println("n_amount"+n_amount);
-		System.out.println("id"+id);
-		gratuityService.updateData(n_name, n_address,n_dob,n_relation,n_amount, id);
-		
-	    // Optional<GratuityList> emp =  gratuityService.getDatabyId(id);
-	}
-	
-	@PutMapping(value="/api/updateData/{id}")
-	public void updateNomineeData(NomineeVo nomineeVo)
-	{
-		
-		System.out.println("name"+nomineeVo.getN_name());
-		System.out.println("n_address"+nomineeVo.getN_address());
-		System.out.println("n_dob"+nomineeVo.getN_dob());
-		System.out.println("n_relation"+nomineeVo.getN_relation());
-		System.out.println("n_amount"+nomineeVo.getN_amount());
-		System.out.println("id"+id);
-		gratuityService.updateNomineeData(nomineeVo);
-		
-	    // Optional<GratuityList> emp =  gratuityService.getDatabyId(id);
-	}
-	*/
-	/*
-	@RequestMapping(value= "/employee/update/{id}", method= RequestMethod.PUT)
-    public Employee updateEmployee(@RequestBody Employee updemp, @PathVariable int id) throws Exception {
-        System.out.println(this.getClass().getSimpleName() + " - Update employee details by id is invoked.");
- 
-        Optional<GratuityList> emp =  service.getEmployeeById(id);
-        if (!emp.isPresent())
-            throw new Exception("Could not find employee with id- " + id);
- 
-        // IMPORTANT - To prevent the overriding of the existing value of the variables in the database, 
-         // if that variable is not coming in the @RequestBody annotation object. 
-        if(updemp.getName() == null || updemp.getName().isEmpty())
-            updemp.setName(emp.get().getName());
-        if(updemp.getDepartment() == null || updemp.getDepartment().isEmpty())
-            updemp.setDepartment(emp.get().getDepartment());
-        if(updemp.getSalary() == 0)
-            updemp.setSalary(emp.get().getSalary());
- 
-        // Required for the "where" clause in the sql query template.
-        updemp.setId(id);
-        return service.updateEmployee(updemp);
-    }
-	*/
-	
-//	@ApiOperation(value="delete",notes="")
-//	@DeleteMapping(value="/api/delete/{id}")
-//	public void deleteById(@PathVariable long id){
-//		 gratuityService.delete(id);	 
-//	}
-	
-	
+
 }
