@@ -1,5 +1,10 @@
 package com.ncr.gratuity.ValueObjects;
 
+import java.util.Date;
+import java.util.Set;
+
+import com.ncr.gratuity.model.GratuityNominee;
+
 public class GratuityVo {
 	
 	private String first_name;
@@ -8,10 +13,18 @@ public class GratuityVo {
 	private String emp_no;
 	private String religion;
 	private String marital_status;
-	private String dob;
+	private Date dob;
 	private String paddress;
 	private String ehusband;
 	
+	private Set<GratuityNominee> gratuityNominee;
+	
+	public Set<GratuityNominee> getGratuityNominee() {
+		return gratuityNominee;
+	}
+	public void setGratuityNominee(Set<GratuityNominee> gratuityNominee) {
+		this.gratuityNominee = gratuityNominee;
+	}
 	public String getFirst_name() {
 		return first_name;
 	}
@@ -48,10 +61,10 @@ public class GratuityVo {
 	public void setMarital_status(String marital_status) {
 		this.marital_status = marital_status;
 	}
-	public String getDob() {
+	public Date getDob() {
 		return dob;
 	}
-	public void setDob(String dob) {
+	public void setDob(Date dob) {
 		this.dob = dob;
 	}
 	public String getPaddress() {

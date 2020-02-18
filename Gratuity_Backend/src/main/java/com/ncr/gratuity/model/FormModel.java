@@ -90,7 +90,19 @@ public class FormModel {
     @Column(name= "emp_sig")
     private String emp_sig;
     
-    /******************************			
+    @JsonManagedReference
+    @OneToMany(fetch = FetchType.EAGER,cascade=CascadeType.ALL,mappedBy="formModel")
+    private Set<GratuityNominee> gratuityNominee;
+    
+    public Set<GratuityNominee> getGratuityNominee() {
+		return gratuityNominee;
+	}
+
+	public void setGratuityNominee(Set<GratuityNominee> gratuityNominee) {
+		this.gratuityNominee = gratuityNominee;
+	}
+
+	/******************************			
 	 *		Form 11
 	 ******************************/ 
     

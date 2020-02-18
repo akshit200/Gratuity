@@ -1,5 +1,5 @@
 {
-  "name": "gratuity",
+  "name": "nomination",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -19,6 +19,11 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@types/jspdf": "^1.3.3",
+    "bootstrap": "^4.4.1",
+    "html2canvas": "^1.0.0-rc.5",
+    "jquery": "^3.4.1",
+    "jspdf": "^1.4.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

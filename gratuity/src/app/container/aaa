@@ -1,0 +1,126 @@
+<!-- 
+
+<div class="container" style="margin: left;">
+   <div class="a">
+       Experience a new world of interation
+        <h3>FORM OF NOMINATION</h3>
+  <span class="brmedium"></span>
+  <h3>EMPLOYEES GROUP GRATUITY FORM</h3>
+<hr>
+  (Name of Fund)
+  </div>
+  <form method="POST" action="">
+
+    
+    <label for="firstname">Name</label> &nbsp;
+    <input type="text" [(ngModel)]="firstName"  #firstname="ngModel" (change)="log(firstName)" placeholder="Enter Name" name="firstname" required>
+    <div class="alert" *ngIf="firstname.touched && !firstname.valid">*Required</div>
+
+
+    <label for="fname">FATHER'S/HUSBAND'S NAME(IN BLOCK LETTERS)</label> &nbsp;
+    <input type="text" [(ngModel)]="fname"  #firstname="ngModel" (change)="log(fname)" placeholder="Enter Name" name="fname" required>
+    <div class="alert" *ngIf="fname.touched && !fname.valid">*Required</div>
+
+    <label for="Gender">Gender</label>
+    <select name="Gender" id="Gender" required>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="others">Others</option>
+    </select>
+    <span class="brmedium"></span>
+
+    <label for="eno">Emp. No</label> &nbsp;
+    <input type="text" [(ngModel)]="eno"  #firstname="ngModel" (change)="log(eno)" placeholder="Enter Emp. No" name="eno" required>
+    <div class="alert" *ngIf="eno.touched && !eno.valid">*Required</div>
+
+
+    <label for="religion">Religion</label>
+    <input type="text" placeholder="Enter Religion" name="religion" required>
+
+    <label for="religion">Religion</label>
+    <input type="text" placeholder="Enter Religion" name="religion" required>
+
+    <label for="ms">Martital Status</label>
+    <select name="ms" id="ms" required>
+      <option value="um">Unmarried</option>
+      <option value="m">Married</option>
+      <option value="w">Widow</option>
+      <option value="wi">Widower</option>
+    </select>
+
+    <span class="brmedium"></span>
+    <label for="dob">Date of Birth</label>
+    <input type="date" class="dob" name="dob" required>
+ 
+    <label for="address">Permanent Address</label>
+    <input type="text" placeholder="Enter Address" name="address" required>
+
+    <div class="container"> 
+
+        <span class="brmedium"></span>
+        <span class="brmedium"></span>
+        <span class="brmedium"></span> 
+        
+        <table>
+            <thead>
+              <tr>
+                <th>Name of Nominee</th>
+                <th>Address of Nominee</th>
+                <th>Relationship with Employee</th>
+                <th>Age of Nominee</th>
+                <th>Amount to be Paid</th>
+              </tr>
+            </thead>
+            <body>
+              <tr>
+                <td>
+                  <input [(ngModel)]="dynamicArray[i].name" class="form-control" type="text">
+                </td>
+                <td><input [(ngModel)]="dynamicArray[i].name" class="form-control" type="text"></td>
+                <td><input [(ngModel)]="dynamicArray[i].name" class="form-control" type="text"></td>
+              </tr>
+              <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>mary@example.com</td>
+              </tr>
+              <tr>
+                <td>contenteditable='true'</td>
+                <td>contenteditable='true'</td>
+                <td>contenteditable='true'</td>
+              </tr>
+            </body>
+          </table>
+ 
+        
+
+        <label for="doe">Date of exclusion of my husband from my family</label>
+        <input type="date" class="dob" name="dob" required>
+
+        <label for="Wsign">First witness signature</label> 
+        <input type="file" accept="image/*" ng-required="expression">
+
+        <label for="Wsign">Second witness signature</label> 
+        <input type="file" accept="image/*" ng-required="expression">
+
+        <label for="Esign">Signature of Employee</label> 
+        <input type="file" accept="image/*" ng-required="expression">
+
+        <label for="Emsign">Signature of Employer</label> 
+        <input type="file" accept="image/*" ng-required="expression">
+
+         <input type="email" placeholder="johnmarker@mail.com" name="email" required> 
+        
+    
+     <label for="email">Email ID</label>
+    <input type="email" placeholder="johnmarker@mail.com" name="email" required>
+    <label for="password">Password</label>
+    <input type="password" placeholder="**********" name="password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+    <label for="confirmpassword">Confirm Password</label>
+    <input type="password" placeholder="**********" name="confirmpassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+    <label for="phonenumber">Contact Number</label>
+    <input type="number" pattern="[0-9]{10}" name="phonenumber" maxlength="10">
+    <button type="submit">Submit</button> 
+  </form>
+</div>
+ -->

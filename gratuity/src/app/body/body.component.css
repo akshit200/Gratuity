@@ -1,84 +1,83 @@
-div.a{
-    border-style: solid;
-    border-color: black;
-    box-sizing: border-box ;
-    word-wrap: normal;
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 150px;
-    margin-bottom: 50px;
+.container
+{
+margin-top: 90px;
+margin-left:  auto;
+margin-right: auto;
+width: 90%;
+text-align: left;
 }
-.calign{
-    text-align: center;
+h1{
+text-align: center;
+}
+ 
+.alert{
+display: block;
+width: 50%;
+margin-left: 300px;
  
 }
-hr {
-    border: none;
-    height: 1px;
-    color: black; 
-    background-color: black;
-}
-div.pad{
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-}
-input[type=text] {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #000000;
-    padding-bottom: 2px;
-}
-.brmedium { 
-    display: block; 
-    margin-bottom: 1em; 
-}
-div.bg{
-    background-color: green;
-}
-
-
-table#t01 {
-    width: 100%;
-    background-color: #f1f1c1;
-  }
-  table {
-    width:100%;
-  }
-  table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
-  th, td {
-    padding: 15px;
-    text-align: left;
-  }
-  table#t01 tr:nth-child(even) {
-    background-color: #eee;
-  }
-  table#t01 tr:nth-child(odd) {
-   background-color: #fff;
-  }
-  table#t01 th {
-    background-color: black;
-    color: white;
-  }
  
-.none{
-    text-align: right;
-    margin-right: 150px;
+form{
+margin:8pxauto;
+width: 100%;
+font-size: 13px;
+ 
 }
-
-.ab{
-    text-align: right;
-    margin-right: 35px;
+.input{
+display: block;
+width: 80%;
 }
-
-.bc{
-    text-align: right;
-    margin-right: 110px;
+label{
+margin-left: 300px;
 }
-
-.aa{
-    text-align: center;
+label[for="gender"]{
+display: block;
+margin-left: 300px;
+ 
+}
+select{
+display: block;
+margin-left: 300px;
+width: 50%;
+padding:1.5rem;
+border-color: black;
+}
+ 
+input{
+outline-color:white;
+margin-left: 300px;
+ 
+margin-bottom: 1.5rem;
+outline-width: 0.2rem;
+font-variant: normal;
+font-weight: bolder;
+font-feature-settings: "vjmo";
+width:50%;
+padding: 1rem;
+border-style: solid;
+border-bottom-left-radius: 0rem;
+border-top-right-radius: 0rem;
+display: block;
+}
+input[type="text"]:focus{
+border-color: #54b948;
+}
+ 
+input[type="password"]:focus{
+border-color: #54b948;
+}
+ 
+input[type="number"]:focus{
+border-color: #54b948;
+}
+ 
+button{
+display: block;
+padding: 1rem6rem;
+margin:10pxauto;
+}
+button:hover{
+color: #54b948;
+box-shadow: #54b948;
+border-color: #54b948;
 }

@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ncr.gratuity.ValueObjects.EpsVo;
-
+import com.ncr.gratuity.ValueObjects.GratuityVo;
 import com.ncr.gratuity.model.FormModel;
+import com.ncr.gratuity.model.GratuityNominee;
 import com.ncr.gratuity.model.NomineeList;
 
 
@@ -26,14 +27,8 @@ public class FormRepository {
 	@PersistenceContext
 	EntityManager em;
 	Set<NomineeList> nomineeList=new HashSet<NomineeList>();
-	
-	
-
-	/*public void insert(String Task)
-	{
-		HibernateQuerries.getData();
-	}*/
-	
+	Set<GratuityNominee> gratuityNominee=new HashSet<GratuityNominee>();
+		
 	
 	public EpsVo getEpsData(@RequestParam Long id)
 	{
@@ -100,6 +95,50 @@ public class FormRepository {
 		System.out.println("from repository");
 		formCrudRepository.save(formModel);
 	}
+	
+	
+	
+	
+	/***********************************************************************
+	 * 			Gratuity Form
+	 ***********************************************************************/
+	public GratuityVo getGratuityData(@RequestParam Long id)
+	{
+		
+		FormModel formModel=new FormModel();
+		
+		//formModel.getNomineeList().forEach(nominee->{nominee.getFormModel();});
+		
+		
+		formModel= formCrudRepository.findById(id).get();
+		GratuityVo gratuityVo=new GratuityVo();
+		System.out.println("Nominee =="+formModel.getNomineeList());
+		for(GratuityNominee nominee:formModel.getGratuityNominee()) {
+			gratuityNominee.add(nominee);
+		}
+	
+		gratuityVo.setDob(formModel.getDob());
+		gratuityVo.setFirst_name(formModel.getFirst_name());
+		gratuityVo.setFather_name(formModel.getFather_name());
+		gratuityVo.setGender(formModel.getGender());
+		gratuityVo.setEmp_no(formModel.getEmp_no());
+		gratuityVo.setReligion(formModel.getReligion());
+		gratuityVo.setMarital_status(formModel.getMarital_status());
+		gratuityVo.setPaddress(formModel.getPaddress());
+		gratuityVo.setEhusband(formModel.getEhusband());
+				
+		return gratuityVo;
+		
+		
+	}
+	
+	public String saveGratuityData(FormModel formModel) {
+		formModel.getNomineeList().forEach(nominee->{nominee.setFormModel(formModel);});
+		formCrudRepository.save(formModel);
+		return "successful";
+	}
+	
+	
 	
 	
 	/*
