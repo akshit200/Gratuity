@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ncr.gratuity.ValueObjects.EpsVo;
+import com.ncr.gratuity.ValueObjects.FormElevenVo;
 import com.ncr.gratuity.ValueObjects.GratuityVo;
 import com.ncr.gratuity.model.FormModel;
 import com.ncr.gratuity.model.GratuityNominee;
@@ -138,7 +139,46 @@ public class FormRepository {
 		return "successful";
 	}
 	
+	/***********************************************************************
+	 * 			Form Eleven
+	 ***********************************************************************/
 	
+	public FormElevenVo getFormElevenData(@RequestParam Long id)
+	{
+		
+		FormModel formModel=new FormModel();		
+		
+		formModel= formCrudRepository.findById(id).get();
+		FormElevenVo formElevenVo=new FormElevenVo();
+		
+		formElevenVo.setEmail_Id(formModel.getEmail_Id());
+		formElevenVo.setFather_name(formModel.getFather_name());
+		formElevenVo.setFirst_name(formModel.getFirst_name());
+		formElevenVo.setGender(formModel.getGender());
+		formElevenVo.setIFS_Code(formModel.getIFS_Code());
+		formElevenVo.setInternational_worker(formModel.getInternational_worker());
+		formElevenVo.setLast_name(formModel.getLast_name());
+		formElevenVo.setMarital_status(formModel.getMarital_status());
+		formElevenVo.setMobile_no(formModel.getMobile_no());
+		formElevenVo.setScheme_1952(formModel.getScheme_1952());
+		formElevenVo.setScheme_1955(formModel.getScheme_1955());
+		formElevenVo.setAadhar_no(formModel.getAadhar_no());
+		formElevenVo.setPAN_no(formModel.getPAN_no());
+		
+		return formElevenVo;
+		
+	
+	
+		
+		
+	}
+	
+	
+	public String saveFormElevenData(FormModel formModel) {
+		formModel.getNomineeList().forEach(nominee->{nominee.setFormModel(formModel);});
+		formCrudRepository.save(formModel);
+		return "successful";
+	}
 	
 	
 	/*

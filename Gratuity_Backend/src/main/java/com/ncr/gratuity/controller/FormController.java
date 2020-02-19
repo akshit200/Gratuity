@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.google.common.base.Optional;
 import com.ncr.gratuity.ValueObjects.EpsVo;
+import com.ncr.gratuity.ValueObjects.FormElevenVo;
 import com.ncr.gratuity.ValueObjects.GratuityVo;
 import com.ncr.gratuity.ValueObjects.NomineeVo;
 import com.ncr.gratuity.model.FormModel;
@@ -76,5 +77,20 @@ public class FormController {
 		return formService.saveGratuityData(formModel);
 		
 	}
-
+	
+	/**************************Form Eleven***********************************/
+   
+	@GetMapping(value="/api/get_formEleven_data")
+	public FormElevenVo getFormElevenData(@RequestParam Long id)
+	{
+		return formService.getFormElevenData(id);
+		
+	}
+	
+	@PostMapping(value="/api/save_formEleven_data")
+	public String saveFormElevenData(@RequestBody FormModel formModel)
+	{
+		return formService.saveFormElevenData(formModel);
+		
+	}
 }
