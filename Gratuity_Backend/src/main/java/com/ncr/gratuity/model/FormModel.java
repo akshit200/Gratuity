@@ -61,9 +61,9 @@ public class FormModel {
 		this.nomineeList = nomineeList;
 	}
 	    
-						/******************************			
-						*		Gratuity Form
-						******************************/ 
+							/******************************			
+							 *		Gratuity Form
+							 ******************************/ 
 	
     @Column(name= "FatherName")
     private String father_name;

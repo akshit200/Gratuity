@@ -96,8 +96,5 @@ public class NomineeList {
 	public void setN_amount(String n_amount) {
 		this.n_amount = n_amount;
 	}
-    
-    
-	
 
 }
