@@ -15,7 +15,7 @@ public class GratuityVo {
 	private String marital_status;
 	private Date dob;
 	private String paddress;
-	private String ehusband;
+	private Date ehusband;
 	
 	private Set<GratuityNominee> gratuityNominee;
 	
@@ -73,10 +73,10 @@ public class GratuityVo {
 	public void setPaddress(String paddress) {
 		this.paddress = paddress;
 	}
-	public String getEhusband() {
+	public Date getEhusband() {
 		return ehusband;
 	}
-	public void setEhusband(String ehusband) {
+	public void setEhusband(Date ehusband) {
 		this.ehusband = ehusband;
 	}
 	

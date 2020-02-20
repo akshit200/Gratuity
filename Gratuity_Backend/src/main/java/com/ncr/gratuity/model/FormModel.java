@@ -79,7 +79,7 @@ public class FormModel {
     private String religion;
     
     @Column(name= "ehusband")
-    private String ehusband;
+    private Date ehusband;
 
 	@Column(name= "w1_sig")
     private String w1_sig;
@@ -283,11 +283,11 @@ public class FormModel {
 		this.paddress = paddress;
 	}
 
-	public String getEhusband() {
+	public Date getEhusband() {
 		return ehusband;
 	}
 
-	public void setEhusband(String ehusband) {
+	public void setEhusband(Date ehusband) {
 		this.ehusband = ehusband;
 	}
 
