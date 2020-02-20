@@ -163,6 +163,16 @@ public class FormRepository {
 		formElevenVo.setAadharCard(formModel.getAadharCard());
 		formElevenVo.setIfsCode(formModel.getIfsCode());
 		formElevenVo.setPanCard(formModel.getPanCard());
+		formElevenVo.setAccount_no(formModel.getAccount_no());
+		formElevenVo.setPf_no(formModel.getPf_no());
+		formElevenVo.setExit_date(formModel.getExit_date());
+		formElevenVo.setCertificate_no(formModel.getCertificate_no());
+		formElevenVo.setPpo_no(formModel.getPpo_no());
+		formElevenVo.setCountry_origin(formModel.getCountry_origin());
+		formElevenVo.setPassport_no(formModel.getPassport_no());
+		
+		
+		
 		return formElevenVo;
 		
 	

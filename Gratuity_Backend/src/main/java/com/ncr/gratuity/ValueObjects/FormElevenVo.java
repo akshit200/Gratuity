@@ -1,5 +1,7 @@
 package com.ncr.gratuity.ValueObjects;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 
 public class FormElevenVo {
@@ -22,6 +24,63 @@ public class FormElevenVo {
 	private byte[] aadharCard;
     private byte[] panCard;
 	
+    private String account_no;
+    private String pf_no;
+    private Date exit_date;
+    private String certificate_no;
+    private String ppo_no;
+    private String country_origin;
+    private String passport_no;
+    
+    public String getAccount_no() {
+		return account_no;
+	}
+	public void setAccount_no(String account_no) {
+		this.account_no = account_no;
+	}
+	public String getPf_no() {
+		return pf_no;
+	}
+	public void setPf_no(String pf_no) {
+		this.pf_no = pf_no;
+	}
+	public Date getExit_date() {
+		return exit_date;
+	}
+	public void setExit_date(Date exit_date) {
+		this.exit_date = exit_date;
+	}
+	public String getCertificate_no() {
+		return certificate_no;
+	}
+	public void setCertificate_no(String certificate_no) {
+		this.certificate_no = certificate_no;
+	}
+	public String getPpo_no() {
+		return ppo_no;
+	}
+	public void setPpo_no(String ppo_no) {
+		this.ppo_no = ppo_no;
+	}
+	public String getCountry_origin() {
+		return country_origin;
+	}
+	public void setCountry_origin(String country_origin) {
+		this.country_origin = country_origin;
+	}
+	public String getPassport_no() {
+		return passport_no;
+	}
+	public void setPassport_no(String passport_no) {
+		this.passport_no = passport_no;
+	}
+	public Long getValidity_passport() {
+		return validity_passport;
+	}
+	public void setValidity_passport(Long validity_passport) {
+		this.validity_passport = validity_passport;
+	}
+	private Long validity_passport;
     
 	
 	public String getFirst_name() {

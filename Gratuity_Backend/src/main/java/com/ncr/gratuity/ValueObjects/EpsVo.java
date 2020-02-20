@@ -24,6 +24,7 @@ public class EpsVo {
     private Long age;
     private String family_member;
     
+    
     public String getRelation() {
 		return relation;
 	}
