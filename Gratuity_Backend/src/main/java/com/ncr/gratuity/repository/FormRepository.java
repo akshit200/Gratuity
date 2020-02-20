@@ -53,6 +53,8 @@ public class FormRepository {
 		epsVo.setLast_name(formModel.getLast_name());
 		epsVo.setMarital_status(formModel.getMarital_status());
 		epsVo.setPaddress(formModel.getPaddress());	
+		epsVo.setEmployerSign(formModel.getEmployerSign());
+		epsVo.setSubscriberSign(formModel.getSubscriberSign());
 		//formModel
 		return epsVo;
 		
@@ -76,10 +78,13 @@ public class FormRepository {
 	
 	
 	public String saveEpsData(FormModel formModel) {
-		formModel.getNomineeList().forEach(nominee->{nominee.setFormModel(formModel);});
-		formCrudRepository.save(formModel);
-		return "successful";
-	}
+		
+
+			formModel.getNomineeList().forEach(nominee->{nominee.setFormModel(formModel);});
+			formCrudRepository.save(formModel);
+			return "successful";
+		}
+	
 	
 
 	
@@ -111,6 +116,9 @@ public class FormRepository {
 		gratuityVo.setMarital_status(formModel.getMarital_status());
 		gratuityVo.setPaddress(formModel.getPaddress());
 		gratuityVo.setEhusband(formModel.getEhusband());
+		gratuityVo.setFirstWitnessSign(formModel.getFirstWitnessSign());
+		gratuityVo.setEmpSign(formModel.getEmpSign());
+		gratuityVo.setSecondWitnessSign(formModel.getSecondWitnessSign());
 		return gratuityVo;
 	}
 	
@@ -132,6 +140,9 @@ public class FormRepository {
 		formModel= formCrudRepository.findById(id).get();
 		FormElevenVo formElevenVo=new FormElevenVo();
 		
+		
+		
+		
 		formElevenVo.setEmail_Id(formModel.getEmail_Id());
 		formElevenVo.setFather_name(formModel.getFather_name());
 		formElevenVo.setFirst_name(formModel.getFirst_name());
@@ -145,7 +156,9 @@ public class FormRepository {
 		formElevenVo.setScheme_1955(formModel.getScheme_1955());
 		formElevenVo.setAadhar_no(formModel.getAadhar_no());
 		formElevenVo.setPAN_no(formModel.getPAN_no());
-		
+		formElevenVo.setAadharCard(formModel.getAadharCard());
+		formElevenVo.setIfsCode(formModel.getIfsCode());
+		formElevenVo.setPanCard(formModel.getPanCard());
 		return formElevenVo;
 		
 	
@@ -161,10 +174,4 @@ public class FormRepository {
 		return "successful";
 	}
 	
-	
-	/*
-	public void updateData()
-	{
-		
-
 }

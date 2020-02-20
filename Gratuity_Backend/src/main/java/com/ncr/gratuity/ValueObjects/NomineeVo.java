@@ -2,6 +2,8 @@ package com.ncr.gratuity.ValueObjects;
 
 import java.sql.Date;
 
+import javax.persistence.Column;
+
 
 public class NomineeVo {
 	 
@@ -12,6 +14,29 @@ public class NomineeVo {
 	    private Date n_dob;
 	    private String n_amount;
 
+	
+		private byte[] employerSign;
+		
+	
+		public byte[] getEmployerSign() {
+			return employerSign;
+		}
+
+		public void setEmployerSign(byte[] employerSign) {
+			this.employerSign = employerSign;
+		}
+
+		public byte[] getSubscriberSign() {
+			return subscriberSign;
+		}
+
+		public void setSubscriberSign(byte[] subscriberSign) {
+			this.subscriberSign = subscriberSign;
+		}
+
+		private byte[] subscriberSign;
+		
+	    
 		public String getN_amount() {
 			return n_amount;
 		}
@@ -52,4 +77,5 @@ public class NomineeVo {
 			this.n_name = n_name;
 		}
 
+	
 }
