@@ -1,5 +1,7 @@
 package com.ncr.gratuity.ValueObjects;
 
+import javax.persistence.Column;
+
 public class FormElevenVo {
 	
 	private String first_name;
@@ -15,7 +17,13 @@ public class FormElevenVo {
     private String IFS_Code;
     private String Aadhar_no;
     private String PAN_no;
+	
+	private byte[] ifsCode;
+	private byte[] aadharCard;
+    private byte[] panCard;
+	
     
+	
 	public String getFirst_name() {
 		return first_name;
 	}
@@ -93,6 +101,25 @@ public class FormElevenVo {
 	}
 	public void setPAN_no(String pAN_no) {
 		PAN_no = pAN_no;
+	}
+	
+	public byte[] getIfsCode() {
+		return ifsCode;
+	}
+	public void setIfsCode(byte[] ifsCode) {
+		this.ifsCode = ifsCode;
+	}
+	public byte[] getAadharCard() {
+		return aadharCard;
+	}
+	public void setAadharCard(byte[] aadharCard) {
+		this.aadharCard = aadharCard;
+	}
+	public byte[] getPanCard() {
+		return panCard;
+	}
+	public void setPanCard(byte[] panCard) {
+		this.panCard = panCard;
 	}
     
     

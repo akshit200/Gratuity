@@ -10,11 +10,16 @@ public class EpsVo {
 	
     private Long id;
 	private String first_name;
-    private String last_name;
+    private Long employeeId;
+    private String fatherName;
+    private Date dateOfJoining;
+	private String last_name;
     private Date dob;
     private String marital_status;
     private String paddress;
     private String eps_no;
+    private byte[] subscriberSign;
+    private byte[] employerSign;
     
     private Set<NomineeList> nomineeList;
     
@@ -48,9 +53,6 @@ public class EpsVo {
 		this.dob = dob;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	
 	public String getMarital_status() {
@@ -76,6 +78,46 @@ public class EpsVo {
 	}
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public byte[] getSubscriberSign() {
+		return subscriberSign;
+	}
+
+	public void setSubscriberSign(byte[] subscriberSign) {
+		this.subscriberSign = subscriberSign;
+	}
+
+	public byte[] getEmployerSign() {
+		return employerSign;
+	}
+
+	public void setEmployerSign(byte[] employerSign) {
+		this.employerSign = employerSign;
+	}
+
+	public Long getEmployeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(Long employeeId) {
+		this.employeeId = employeeId;
+	}
+
+	public String getFatherName() {
+		return fatherName;
+	}
+
+	public void setFatherName(String fatherName) {
+		this.fatherName = fatherName;
+	}
+
+	public Date getDateOfJoining() {
+		return dateOfJoining;
+	}
+
+	public void setDateOfJoining(Date dateOfJoining) {
+		this.dateOfJoining = dateOfJoining;
 	}
     
 }

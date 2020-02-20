@@ -3,6 +3,8 @@ package com.ncr.gratuity.ValueObjects;
 import java.util.Date;
 import java.util.Set;
 
+import javax.persistence.Column;
+
 import com.ncr.gratuity.model.GratuityNominee;
 
 public class GratuityVo {
@@ -16,6 +18,35 @@ public class GratuityVo {
 	private Date dob;
 	private String paddress;
 	private Date ehusband;
+	
+	
+  
+	private byte[] firstWitnessSign;
+	
+  
+	private byte[] secondWitnessSign;
+    
+ 
+	public byte[] getFirstWitnessSign() {
+		return firstWitnessSign;
+	}
+	public void setFirstWitnessSign(byte[] firstWitnessSign) {
+		this.firstWitnessSign = firstWitnessSign;
+	}
+	public byte[] getSecondWitnessSign() {
+		return secondWitnessSign;
+	}
+	public void setSecondWitnessSign(byte[] secondWitnessSign) {
+		this.secondWitnessSign = secondWitnessSign;
+	}
+	public byte[] getEmpSign() {
+		return empSign;
+	}
+	public void setEmpSign(byte[] empSign) {
+		this.empSign = empSign;
+	}
+	private byte[] empSign;
+	
 	
 	private Set<GratuityNominee> gratuityNominee;
 	

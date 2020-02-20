@@ -28,7 +28,12 @@ public class FormModel {
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long form_id;
-    
+					
+					
+						/******************************			
+						 *		 	EPS Form
+						 ******************************/ 
+
     @Column(name= "First_Name")
     private String first_name;
     
@@ -48,22 +53,27 @@ public class FormModel {
     @Column(name= "eps_no")
     private String eps_no;
     
-    @JsonManagedReference
+    
+	@Column(name="employer_sign")
+	private byte[] employerSign;
+	
+	@Column(name="subscriber_sign")
+	private byte[] subscriberSign;
+	
+	@Column(name="employee_id")
+	private Long employeeId;
+   
+	@Column(name="date_of_joining")
+    private Date dateOfJoining;
+    
+	@JsonManagedReference
     @OneToMany(fetch = FetchType.EAGER,cascade=CascadeType.ALL,mappedBy="formModel")   
     private Set<NomineeList> nomineeList;
     
-    
-    public Set<NomineeList> getNomineeList() {
-		return nomineeList;
-	}
-
-	public void setNomineeList(Set<NomineeList> nomineeList) {
-		this.nomineeList = nomineeList;
-	}
-	    
-						/******************************			
-						*		Gratuity Form
-						******************************/ 
+    	    
+							/******************************			
+							 *		Gratuity Form
+							 ******************************/ 
 	
     @Column(name= "FatherName")
     private String father_name;
@@ -81,27 +91,21 @@ public class FormModel {
     @Column(name= "ehusband")
     private Date ehusband;
 
-	@Column(name= "w1_sig")
-    private String w1_sig;
+	
+    @Column(name="First_Witness_sign")
+	private byte[] firstWitnessSign;
+	
+    @Column(name="Second_Witness_sign")
+	private byte[] secondWitnessSign;
     
-    @Column(name= "w2_sig")
-    private String w2_sig;
-    
-    @Column(name= "emp_sig")
-    private String emp_sig;
+    @Column(name="emp_sign")
+	private byte[] empSign;
+	
     
     @JsonManagedReference
     @OneToMany(fetch = FetchType.EAGER,cascade=CascadeType.ALL,mappedBy="formModel")
     private Set<GratuityNominee> gratuityNominee;
     
-    public Set<GratuityNominee> getGratuityNominee() {
-		return gratuityNominee;
-	}
-
-	public void setGratuityNominee(Set<GratuityNominee> gratuityNominee) {
-		this.gratuityNominee = gratuityNominee;
-	}
-
 	/******************************			
 	 *		Form 11
 	 ******************************/ 
@@ -129,6 +133,16 @@ public class FormModel {
     
     @Column(name= "PAN_no")
     private String PAN_no;
+    
+    @Column(name="IFS_Image")
+	private byte[] ifsCode;
+	
+    @Column(name="Aadhar_card")
+	private byte[] aadharCard;
+	
+    @Column(name="Pan_Card")
+	private byte[] panCard;
+	
     
     public String getEmail_Id() {
 		return Email_Id;
@@ -194,13 +208,6 @@ public class FormModel {
 		PAN_no = pAN_no;
 	}
 
-	public String getW1_sig() {
-		return w1_sig;
-	}
-
-	public void setW1_sig(String w1_sig) {
-		this.w1_sig = w1_sig;
-	}
     
     public String getMarital_status() {
 		return marital_status;
@@ -210,21 +217,7 @@ public class FormModel {
 		this.marital_status = marital_status;
 	}
    
-	public String getW2_sig() {
-		return w2_sig;
-	}
-	public void setW2_sig(String w2_sig) {
-		this.w2_sig = w2_sig;
-	}
-	
-	public String getEmp_sig() {
-		return emp_sig;
-	}
 
-	public void setEmp_sig(String emp_sig) {
-		this.emp_sig = emp_sig;
-	}
-		
 
 	public Date getDob() {
 		return dob;
@@ -237,7 +230,7 @@ public class FormModel {
 	public void setForm_id(Long form_id) {
 		this.form_id = form_id;
 	}
-
+	
 	public Long getForm_id() {
 		return form_id;
 	}
@@ -313,6 +306,105 @@ public class FormModel {
 
 	public void setEmp_no(String emp_no) {
 		this.emp_no = emp_no;
+	}
+	
+	
+	public byte[] getEmployerSign() {
+		return employerSign;
+	}
+
+	public void setEmployerSign(byte[] employerSign) {
+		this.employerSign = employerSign;
+	}
+
+	public byte[] getSubscriberSign() {
+		return subscriberSign;
+	}
+
+	public void setSubscriberSign(byte[] subscriberSign) {
+		this.subscriberSign = subscriberSign;
+	}
+
+	public byte[] getFirstWitnessSign() {
+		return firstWitnessSign;
+	}
+
+	public void setFirstWitnessSign(byte[] firstWitnessSign) {
+		this.firstWitnessSign = firstWitnessSign;
+	}
+
+	public byte[] getSecondWitnessSign() {
+		return secondWitnessSign;
+	}
+
+	public void setSecondWitnessSign(byte[] secondWitnessSign) {
+		this.secondWitnessSign = secondWitnessSign;
+	}
+
+	public byte[] getEmpSign() {
+		return empSign;
+	}
+
+	public void setEmpSign(byte[] empSign) {
+		this.empSign = empSign;
+	}
+
+	public byte[] getIfsCode() {
+		return ifsCode;
+	}
+
+	public void setIfsCode(byte[] ifsCode) {
+		this.ifsCode = ifsCode;
+	}
+
+	public byte[] getAadharCard() {
+		return aadharCard;
+	}
+
+	public void setAadharCard(byte[] aadharCard) {
+		this.aadharCard = aadharCard;
+	}
+
+	public byte[] getPanCard() {
+		return panCard;
+	}
+
+	public void setPanCard(byte[] panCard) {
+		this.panCard = panCard;
+	}
+
+
+    public Set<NomineeList> getNomineeList() {
+		return nomineeList;
+	}
+
+	public void setNomineeList(Set<NomineeList> nomineeList) {
+		this.nomineeList = nomineeList;
+	}
+
+
+    public Set<GratuityNominee> getGratuityNominee() {
+		return gratuityNominee;
+	}
+
+	public void setGratuityNominee(Set<GratuityNominee> gratuityNominee) {
+		this.gratuityNominee = gratuityNominee;
+	}
+
+	public Long getEmployeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(Long employeeId) {
+		this.employeeId = employeeId;
+	}
+
+	public Date getDateOfJoining() {
+		return dateOfJoining;
+	}
+
+	public void setDateOfJoining(Date dateOfJoining) {
+		this.dateOfJoining = dateOfJoining;
 	}
 
 }
