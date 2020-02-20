@@ -20,8 +20,39 @@ public class EpsVo {
     private String eps_no;
     private byte[] subscriberSign;
     private byte[] employerSign;
+    private String relation;
+    private Long age;
+    private String family_member;
     
-    private Set<NomineeList> nomineeList;
+    public String getRelation() {
+		return relation;
+	}
+
+	public void setRelation(String relation) {
+		this.relation = relation;
+	}
+
+	public Long getAge() {
+		return age;
+	}
+
+	public void setAge(Long age) {
+		this.age = age;
+	}
+
+	public String getFamily_member() {
+		return family_member;
+	}
+
+	public void setFamily_member(String family_member) {
+		this.family_member = family_member;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	private Set<NomineeList> nomineeList;
     
     public Set<NomineeList> getNomineeList() {
 		return nomineeList;

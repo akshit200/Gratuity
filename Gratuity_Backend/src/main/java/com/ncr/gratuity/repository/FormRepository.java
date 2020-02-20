@@ -55,6 +55,10 @@ public class FormRepository {
 		epsVo.setPaddress(formModel.getPaddress());	
 		epsVo.setEmployerSign(formModel.getEmployerSign());
 		epsVo.setSubscriberSign(formModel.getSubscriberSign());
+		epsVo.setAge(formModel.getAge());
+		epsVo.setRelation(formModel.getRelation());
+		epsVo.setFamily_member(formModel.getFamily_member());
+		
 		//formModel
 		return epsVo;
 		

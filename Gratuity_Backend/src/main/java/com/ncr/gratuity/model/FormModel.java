@@ -65,7 +65,40 @@ public class FormModel {
    
 	@Column(name="date_of_joining")
     private Date dateOfJoining;
-    
+	
+	@Column(name="Relation")
+	private String relation;
+	
+	@Column(name="Age")
+	private Long age;
+	
+	@Column(name="Family_Member")
+	private String family_member;
+	   
+	public String getRelation() {
+		return relation;
+	}
+
+	public void setRelation(String relation) {
+		this.relation = relation;
+	}
+
+	public Long getAge() {
+		return age;
+	}
+
+	public void setAge(Long age) {
+		this.age = age;
+	}
+
+	public String getFamily_member() {
+		return family_member;
+	}
+
+	public void setFamily_member(String family_member) {
+		this.family_member = family_member;
+	}
+
 	@JsonManagedReference
     @OneToMany(fetch = FetchType.EAGER,cascade=CascadeType.ALL,mappedBy="formModel")   
     private Set<NomineeList> nomineeList;
